@@ -1,0 +1,17 @@
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-orange);
+  padding: 0.6em 1.5em;
+  color: var(--color-black);
+  font-size: 18px;
+  border-radius: 20px;
+  border: 0;
+  font-weight: 600;
+}
+button:hover {
+  cursor: pointer;
+  background-color: var(--color-black);
+  color: var(--color-orange);
+}

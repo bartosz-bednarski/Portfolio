@@ -1,0 +1,63 @@
+.home {
+  display: flex;
+  height: 90vh;
+  padding: 15vh 5vw 25vh 5vw;
+}
+.home__main {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+
+  .home__left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    &__position {
+      position: relative;
+      font-size: 24px;
+      margin: 0 0 4vh 160px;
+    }
+    &__position::before {
+      content: "";
+      display: flex;
+      position: absolute;
+      top: 15px;
+      left: -160px;
+      width: 146px;
+      height: 1px;
+      background-color: var(--color-black);
+    }
+    &__welcome::before {
+      content: "Hello ";
+      color: var(--color-orange);
+    }
+    &__name::before {
+      content: "I'm ";
+      color: var(--color-orange);
+    }
+    &__bio {
+      margin-top: 7vh;
+    }
+    &__contact {
+      display: inline-flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      padding: 0 12vw 0 0;
+      margin: 2vh 0;
+      svg {
+        margin: 0 1vw;
+      }
+      svg:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .home__right {
+    display: flex;
+    width: 50%;
+  }
+}

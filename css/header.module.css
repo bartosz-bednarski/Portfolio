@@ -1,0 +1,18 @@
+.header-container {
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vw;
+}
+.header-container ul {
+  list-style-type: none;
+}
+.header-container ul li {
+  display: inline;
+  margin: 0 2em;
+}
+.header-container ul li:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=header.module.css.map */

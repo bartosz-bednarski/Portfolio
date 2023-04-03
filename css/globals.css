@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Habibi&family=PT+Serif&family=Poppins:wght@700&family=Roboto+Condensed:wght@700&family=Roboto+Flex:opsz,wght@8..144,600&display=swap");
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-orange);
+  padding: 0.6em 1.5em;
+  color: var(--color-black);
+  font-size: 18px;
+  border-radius: 20px;
+  border: 0;
+  font-weight: 600;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--color-black);
+  color: var(--color-orange);
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 64px;
+  color: var(--color-black);
+}
+
+p {
+  line-height: 30px;
+}
+
+:root {
+  --background-color: #fff3de;
+  --color-orange: #ffb600;
+  --color-black: #000000;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: "Poppins", sans-serif, "Roboto Flex", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-color);
+}/*# sourceMappingURL=globals.css.map */
