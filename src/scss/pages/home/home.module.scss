@@ -1,7 +1,8 @@
 .home {
   display: flex;
-  height: 90vh;
-  padding: 15vh 5vw 25vh 5vw;
+  box-sizing: border-box;
+  height: 75vh;
+  padding: 0 0 15vh 0;
 }
 .home__main {
   display: flex;
@@ -38,7 +39,7 @@
       color: var(--color-orange);
     }
     &__bio {
-      margin-top: 7vh;
+      padding-top: 7vh;
     }
     &__contact {
       display: inline-flex;
@@ -47,7 +48,7 @@
       justify-content: center;
       height: auto;
       padding: 0 12vw 0 0;
-      margin: 2vh 0;
+      padding: 5vh 0;
       svg {
         margin: 0 1vw;
       }
@@ -56,8 +57,27 @@
       }
     }
   }
-  .home__right {
+  .home__portrait {
     display: flex;
     width: 50%;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 50vh;
+      height: 50vh;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .home {
+    height: auto;
+  }
+  .home__main {
+    flex-direction: column;
+    .home__left,
+    .home__portrait {
+      width: 100%;
+    }
   }
 }

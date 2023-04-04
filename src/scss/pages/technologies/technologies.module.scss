@@ -1,0 +1,54 @@
+.technologies {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  &__header__one::before {
+    content: "Technologies ";
+    color: var(--color-orange);
+  }
+  &__header__two::before {
+    content: "APIs ";
+    color: var(--color-orange);
+  }
+  &__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60vh;
+  }
+  .main__col__one,
+  .main__col__two,
+  .main__col__three {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+    .main__col_item {
+      display: inline-flex;
+      align-items: center;
+      height: 5vh;
+      padding: 1vh 7vw 1vh 1vw;
+      border-radius: 20px;
+      border: 2px solid var(--color-orange);
+      img {
+        height: 5vh;
+        padding: 0 1vw 0 0;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .technologies {
+    height: auto;
+    &__main {
+      flex-direction: column;
+    }
+    .main__col__one,
+    .main__col__two,
+    .main__col__three {
+      .main__col_item {
+        padding: 1vh 7vw 1vh 3vw;
+      }
+    }
+  }
+}

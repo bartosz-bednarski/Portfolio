@@ -5,15 +5,27 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 2vw;
+  margin-bottom: 10vh;
   ul {
     list-style-type: none;
 
     li {
       display: inline;
       margin: 0 2em;
+      .link__active {
+        color: var(--color-orange);
+      }
+      .link__disactive {
+        color: var(--color-black);
+      }
     }
     li:hover {
       cursor: pointer;
     }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header-container {
+    display: none;
   }
 }

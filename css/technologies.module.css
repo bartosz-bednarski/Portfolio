@@ -1,0 +1,57 @@
+.technologies {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+.technologies__header__one::before {
+  content: "Technologies ";
+  color: var(--color-orange);
+}
+.technologies__header__two::before {
+  content: "APIs ";
+  color: var(--color-orange);
+}
+.technologies__main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60vh;
+}
+.technologies .main__col__one,
+.technologies .main__col__two,
+.technologies .main__col__three {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3vh;
+}
+.technologies .main__col__one .main__col_item,
+.technologies .main__col__two .main__col_item,
+.technologies .main__col__three .main__col_item {
+  display: inline-flex;
+  align-items: center;
+  height: 5vh;
+  padding: 1vh 7vw 1vh 1vw;
+  border-radius: 20px;
+  border: 2px solid var(--color-orange);
+}
+.technologies .main__col__one .main__col_item img,
+.technologies .main__col__two .main__col_item img,
+.technologies .main__col__three .main__col_item img {
+  height: 5vh;
+  padding: 0 1vw 0 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  .technologies {
+    height: auto;
+  }
+  .technologies__main {
+    flex-direction: column;
+  }
+  .technologies .main__col__one .main__col_item,
+  .technologies .main__col__two .main__col_item,
+  .technologies .main__col__three .main__col_item {
+    padding: 1vh 7vw 1vh 3vw;
+  }
+}/*# sourceMappingURL=technologies.module.css.map */
