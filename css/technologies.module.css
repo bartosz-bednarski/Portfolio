@@ -1,7 +1,10 @@
 .technologies {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 100vh;
+  padding: 20vh 0 0 0;
+  animation: start 0.5s;
 }
 .technologies__header__one::before {
   content: "Technologies ";
@@ -40,6 +43,16 @@
 .technologies .main__col__three .main__col_item img {
   height: 5vh;
   padding: 0 1vw 0 0;
+}
+@keyframes start {
+  from {
+    transform: translateY(-800px);
+    z-index: 2;
+  }
+  to {
+    transform: translateY(0px);
+    z-index: 0;
+  }
 }
 
 @media only screen and (max-width: 1000px) {

@@ -1,8 +1,10 @@
-import classes from "../../src/scss/pages/home/home.module.scss";
-import * as portrait from "../../public/assets/portrait.png";
+import classes from "./home.module.scss";
+
+import * as portrait from "../../../public/assets/portrait.png";
+
 const Home = () => {
   return (
-    <div className={classes["home"]}>
+    <div className={classes["home"]} id="home">
       <main className={classes["home__main"]}>
         <div className={classes["home__left"]}>
           <span className={classes["home__left__position"]}>

@@ -1,13 +1,13 @@
 .home {
   display: flex;
   box-sizing: border-box;
-  height: 75vh;
-  padding: 0 0 15vh 0;
+  height: 100vh;
+  padding: 20vh 0 15vh 0;
 }
 .home__main {
   display: flex;
   flex-direction: row;
-  height: auto;
+  height: 50vh;
   width: 100%;
 
   .home__left {

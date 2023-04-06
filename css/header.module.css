@@ -1,6 +1,9 @@
 .header-container {
+  position: fixed;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
+  width: 100%;
   height: 10vh;
   align-items: center;
   justify-content: space-between;

@@ -1,7 +1,14 @@
 .technologies {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 100vh;
+  width: 100%;
+  padding: 20vh 0 0 0;
+  background-color: transparent;
+
+  animation: start 0.8s ease-in-out;
+
   &__header__one::before {
     content: "Technologies ";
     color: var(--color-orange);
@@ -36,7 +43,23 @@
       }
     }
   }
+
+  @keyframes start {
+    from {
+      width: 100vw;
+      height: 100vh;
+      transform: translatex(1800px);
+      z-index: 0;
+      background-color: var(--background-color);
+    }
+    to {
+      transform: translateX(-1px);
+      z-index: 0;
+      background-color: var(--background-color);
+    }
+  }
 }
+
 @media only screen and (max-width: 1000px) {
   .technologies {
     height: auto;

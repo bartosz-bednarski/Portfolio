@@ -1,5 +1,4 @@
-import classes from "../../src/scss/pages/technologies/technologies.module.scss";
-
+import classes from "./technologies.module.scss";
 const Technologies = () => {
   return (
     <div className={classes.technologies}>
