@@ -1,9 +1,27 @@
+@import "../../scss/globals/typed.scss";
 .home {
   display: flex;
   box-sizing: border-box;
   height: 100vh;
   padding: 20vh 5vw 15vh 5vw;
 }
+// @keyframes position-typing {
+//   from {
+//     width: 0%;
+//   }
+//   to {
+//     width: 100%;
+//   }
+// }
+// @keyframes blink-caret {
+//   from,
+//   to {
+//     border-color: transparent;
+//   }
+//   50% {
+//     border-color: orange;
+//   }
+// }
 .home__main {
   display: flex;
   flex-direction: row;
@@ -17,8 +35,12 @@
 
     &__position {
       position: relative;
+      width: auto;
+      height: 2vh;
       font-size: 24px;
       margin: 0 0 4vh 160px;
+      // animation: position-typing 4s steps(40, end),
+      //   blink-caret 0.75s step-end infinite;
     }
     &__position::before {
       content: "";
@@ -33,6 +55,21 @@
     &__welcome::before {
       content: "Hello ";
       color: var(--color-orange);
+    }
+    &__welcome {
+      @include typed(
+        (
+          "Red": (
+            color: #e53935,
+          ),
+          "Orange": (
+            color: #f4511e,
+          ),
+        ),
+        [ null,
+        null,
+        ]
+      );
     }
     &__name::before {
       content: "I'm ";

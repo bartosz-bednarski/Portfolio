@@ -1,29 +1,54 @@
-@keyframes loadingAnimation {
-  0% {
-    // transform: translatex(1800px);
-    background-color: royalblue;
+@keyframes loadingHeader {
+  from {
+    transform: rotatex(90deg);
   }
-  100% {
-    // transform: translateX(0px);
-    background-color: red;
+  to {
+    transform: rotatex(0deg);
   }
 }
+@keyframes loadingCols {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+// @keyframes backgroundAnim {
+//   from {
+//     background-color: var(--background-color);
+//     transform: translateY(-50%);
+//   }
+//   to {
+//     transform: translateY(0%);
+//     background: rgb(255, 182, 0);
+//     background: linear-gradient(
+//       174deg,
+//       rgba(255, 182, 0, 0.6278886554621849) 23%,
+//       rgba(255, 243, 222, 1) 23%,
+//       rgba(255, 243, 222, 1) 75%,
+//       rgba(241, 174, 5, 0.6615021008403361) 75%
+//     );
+//   }
+// }
+
 .technologies {
   box-sizing: border-box;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100%;
   padding: 20vh 5vw 0 5vw;
-  background-color: royalblue;
-  opacity: 1;
-  animation-name: loadingAnimation;
-  animation-fill-mode: forwards;
-  animation-duration: 2s;
+  background-color: var(--background-color);
 
-  .technologies:hover {
-    // animation-play-state: running;
-    background-color: red;
+  &__header__one {
+    z-index: 100;
+    animation: loadingHeader 1.5s;
+  }
+  &__header__two {
+    z-index: 100;
+    animation: loadingHeader 1.5s;
   }
   &__header__one::before {
     content: "Technologies ";
@@ -35,6 +60,7 @@
   }
   &__main {
     display: flex;
+    z-index: 100;
     flex-direction: row;
     justify-content: space-between;
     height: 60vh;
@@ -42,22 +68,54 @@
   .main__col__one,
   .main__col__two,
   .main__col__three {
+    z-index: 100;
     margin-top: 5vh;
     display: flex;
     flex-direction: column;
     row-gap: 3vh;
+    opacity: 0;
     .main__col_item {
+      z-index: 100;
+      position: relative;
       display: inline-flex;
       align-items: center;
       height: 5vh;
       padding: 1vh 7vw 1vh 1vw;
       border-radius: 20px;
-      border: 2px solid var(--color-orange);
+      background-color: rgba(255, 182, 0, 0.6);
+
       img {
         height: 5vh;
         padding: 0 1vw 0 0;
       }
     }
+    .main__col_item:hover {
+      background-color: var(--color-orange);
+
+      animation: flesh 0.6s forwards;
+    }
+
+    @keyframes flesh {
+      from {
+        background-color: white;
+        color: black;
+        opacity: 1;
+      }
+      to {
+        background-color: var(--color-orange);
+        color: white;
+        opacity: 1;
+      }
+    }
+  }
+  .main__col__one {
+    animation: loadingCols 1.5s forwards 1s;
+  }
+  .main__col__two {
+    animation: loadingCols 1.5s forwards 2s;
+  }
+  .main__col__three {
+    animation: loadingCols 1.5s forwards 3s;
   }
 }
 

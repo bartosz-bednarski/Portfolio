@@ -8,9 +8,9 @@ const Home = () => {
       <main className={classes["home__main"]}>
         <div className={classes["home__left"]}>
           <span className={classes["home__left__position"]}>
-            Junior Front-End Developer
+            Junior Front-end Developer
           </span>
-          <h1 className={classes["home__left__welcome"]}>There !</h1>
+          <h1 className={classes["home__left__welcome"]}></h1>
           <h1 className={classes["home__left__name"]}>Bartosz Bednarski.</h1>
           <p className={classes["home__left__bio"]}>
             I’m seeking for internship or junior position with Front-End
