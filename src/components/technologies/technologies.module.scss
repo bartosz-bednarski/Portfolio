@@ -1,36 +1,38 @@
-@keyframes loadingHeader {
-  from {
-    transform: rotatex(90deg);
-  }
-  to {
-    transform: rotatex(0deg);
+@keyframes cursor {
+  50% {
+    border-color: transparent;
   }
 }
-@keyframes loadingCols {
-  from {
-    opacity: 0;
-  }
-  to {
+@keyframes header-1TypeWriter {
+  0% {
     opacity: 1;
+    width: 0;
+    border-right: 3px solid black;
+  }
+  99% {
+    width: 34vw;
+    border-right: 3px solid black;
+  }
+  100% {
+    opacity: 1;
+    border-right: 0px solid black;
   }
 }
-// @keyframes backgroundAnim {
-//   from {
-//     background-color: var(--background-color);
-//     transform: translateY(-50%);
-//   }
-//   to {
-//     transform: translateY(0%);
-//     background: rgb(255, 182, 0);
-//     background: linear-gradient(
-//       174deg,
-//       rgba(255, 182, 0, 0.6278886554621849) 23%,
-//       rgba(255, 243, 222, 1) 23%,
-//       rgba(255, 243, 222, 1) 75%,
-//       rgba(241, 174, 5, 0.6615021008403361) 75%
-//     );
-//   }
-// }
+@keyframes header-2TypeWriter {
+  0% {
+    opacity: 1;
+    width: 0;
+    border-right: 3px solid black;
+  }
+  99% {
+    width: 43vw;
+    border-right: 3px solid black;
+  }
+  100% {
+    opacity: 1;
+    border-right: 0px solid black;
+  }
+}
 
 .technologies {
   box-sizing: border-box;
@@ -39,16 +41,28 @@
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  padding: 20vh 5vw 0 5vw;
+  padding: 15vh 5vw 0 5vw;
   background-color: var(--background-color);
 
   &__header__one {
-    z-index: 100;
-    animation: loadingHeader 1.5s;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 34vw;
+    opacity: 0;
+    font-size: 3vw;
+    animation: header-1TypeWriter 1s steps(16) forwards,
+      cursor 0.4s step-end 16 alternate;
   }
   &__header__two {
-    z-index: 100;
-    animation: loadingHeader 1.5s;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 50vw;
+    font-size: 3vw;
+    opacity: 0;
+    animation: header-2TypeWriter 2s 1s steps(24) forwards,
+      cursor 0.4s step-end 24 alternate;
   }
   &__header__one::before {
     content: "Technologies ";
@@ -58,67 +72,169 @@
     content: "APIs ";
     color: var(--color-orange);
   }
+
   &__main {
+    position: relative;
     display: flex;
-    z-index: 100;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    height: 60vh;
+    height: auto;
   }
-  .main__col__one,
-  .main__col__two,
-  .main__col__three {
-    z-index: 100;
+  .main__col-1,
+  .main__col-2,
+  .main__col-3,
+  .main__col-4 {
+    position: relative;
+    width: 14vw;
+    height: 50vh;
+    // transform: rotateY(-90deg);
+    background-color: var(--background-color);
+    // background-color: rgba(1, 1, 1, 0.9);
+    box-shadow: (-4px 4px 4px 4px rgba(0, 0, 0, 0.3));
+    padding: 2vh 2vw;
+    border-radius: 20px;
     margin-top: 5vh;
     display: flex;
     flex-direction: column;
     row-gap: 3vh;
     opacity: 0;
+    animation: punch 0.2s 3s forwards;
+    h2 {
+      color: black;
+      text-align: center;
+      width: auto;
+      position: relative;
+      opacity: 0;
+      margin-bottom: 3vh;
+      animation: punch 0.2s 3.5s forwards;
+    }
+    h2::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 40px;
+      width: 9vw;
+      height: 15px;
+      z-index: -1;
+      opacity: 0;
+      background-color: var(--color-orange);
+      animation: punch-bg 0.2s 3.5s forwards;
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 35px;
+      width: 9vw;
+      height: 15px;
+      z-index: -1;
+      opacity: 0;
+      background-color: var(--color-orange);
+      animation: punch-bg 0.2s 4s forwards;
+    }
     .main__col_item {
-      z-index: 100;
       position: relative;
       display: inline-flex;
       align-items: center;
-      height: 5vh;
-      padding: 1vh 7vw 1vh 1vw;
+      height: auto;
+      color: black;
+      width: 12vw;
+      padding: 1vh 0 1vh 1vw;
       border-radius: 20px;
-      background-color: rgba(255, 182, 0, 0.6);
-
+      box-shadow: (-2px 2px 2px 2px rgba(0, 0, 0, 0.3));
+      opacity: 0;
+      // background-color: rgb(255, 255, 255, 0.7);
+    }
+    .main__col__image-box {
+      display: flex;
+      position: absolute;
+      bottom: 30px;
+      flex-wrap: wrap;
+      width: 80%;
+      justify-content: center;
+      opacity: 0;
+      animation: punch 0.2s 4s forwards;
       img {
-        height: 5vh;
+        height: 4vh;
         padding: 0 1vw 0 0;
       }
     }
-    .main__col_item:hover {
+    .main__col_item::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
       background-color: var(--color-orange);
-
-      animation: flesh 0.6s forwards;
     }
-
-    @keyframes flesh {
-      from {
-        background-color: white;
-        color: black;
-        opacity: 1;
-      }
-      to {
-        background-color: var(--color-orange);
-        color: white;
-        opacity: 1;
-      }
+    .main__col_item:hover {
+      transition: ease-in-out 0.4s;
+      background-color: var(--color-orange);
     }
   }
-  .main__col__one {
-    animation: loadingCols 1.5s forwards 1s;
+  .main__col-1 {
+    .main__col_item {
+      animation: col-items 3s 5s forwards;
+    }
+
+    // h2 {
+    //   animation: punch 0.2s 2s forwards;
+    // }
+    // h2::before {
+    //   animation: punch-bg 0.2s 3s forwards;
+    // }
+    // h2::after {
+    //   animation: punch-bg 0.2s 4s forwards;
+    // }
+    // animation: loadingCols 0.5s forwards 3.5s;
   }
-  .main__col__two {
-    animation: loadingCols 1.5s forwards 2s;
+  .main__col-2 {
+    .main__col_item {
+      animation: col-items 3s 6s forwards;
+    }
+    // animation: loadingCols 0.5s forwards 4s;
   }
-  .main__col__three {
-    animation: loadingCols 1.5s forwards 3s;
+  .main__col-3 {
+    .main__col_item {
+      animation: col-items 3s 7s forwards;
+    }
+    // animation: loadingCols 0.5s forwards 4.5s;
+  }
+  .main__col-4 {
+    .main__col_item {
+      animation: col-items 3s 8s forwards;
+    }
+    // animation: loadingCols 0.5s forwards 5s;
+  }
+  @keyframes punch {
+    from {
+      transform: translate(100px, 50px);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+  @keyframes punch-bg {
+    from {
+      transform: translate(100px, 50px);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0px, 0px);
+      transform: skewY(-4deg);
+      opacity: 1;
+    }
   }
 }
-
+@keyframes col-items {
+  to {
+    opacity: 1;
+  }
+}
 @media only screen and (max-width: 1000px) {
   .technologies {
     height: auto;

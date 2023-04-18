@@ -6,20 +6,25 @@ const Home = () => {
   return (
     <div className={classes["home"]} id="home">
       <main className={classes["home__main"]}>
+        <span className={classes["home__left-position"]}>
+          Junior Front-end Developer
+        </span>
         <div className={classes["home__left"]}>
-          <span className={classes["home__left__position"]}>
-            Junior Front-end Developer
-          </span>
-          <h1 className={classes["home__left__welcome"]}></h1>
-          <h1 className={classes["home__left__name"]}>Bartosz Bednarski.</h1>
+          <div className={classes["home__left__w-box"]}>
+            <h1 className={classes["home__left__welcome"]}>There!</h1>
+          </div>
+          <div className={classes["home__left__n-box"]}>
+            <h1 className={classes["home__left__name"]}>Bartosz Bednarski.</h1>
+          </div>
           <p className={classes["home__left__bio"]}>
-            I’m seeking for internship or junior position with Front-End
-            position.
+            25 years old guy who wants to develop his skills with Front-end
+            programming. I started from learning HTML & CSS over 8 months ago
+            and during this time I learned a lot. I made projects where I could
+            use gained knowledge and handled with many errors I met.
             <br />
-            I enjoy building websites and getting satisfaction from handling
-            problems. <br />
-            My current place of state is Cracow in Poland.
-            <br />
+            <br />I am a person that likes to know how things that I use work
+            and how are they build. That's why I like programming and would like
+            to know about It much more.
           </p>
           <span className={classes["home__left__contact"]}>
             <a href="https://www.linkedin.com/in/bartosz-bednarski-050196234/">

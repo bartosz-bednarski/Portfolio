@@ -1,9 +1,9 @@
-@charset "UTF-8";
 .home {
   display: flex;
   box-sizing: border-box;
   height: 100vh;
   padding: 20vh 5vw 15vh 5vw;
+  background-color: var(--background-color);
 }
 
 .home__main {
@@ -16,15 +16,16 @@
   display: flex;
   flex-direction: column;
   width: 50%;
+  margin-top: 9vh;
 }
-.home__main .home__left__position {
-  position: relative;
+.home__main .home__left-position {
+  position: absolute;
   width: auto;
   height: 2vh;
   font-size: 24px;
   margin: 0 0 4vh 160px;
 }
-.home__main .home__left__position::before {
+.home__main .home__left-position::before {
   content: "";
   display: flex;
   position: absolute;
@@ -34,166 +35,79 @@
   height: 1px;
   background-color: var(--color-black);
 }
+.home__main .home__left__w-box, .home__main .home__left__n-box, .home__main .home__left__p-box {
+  display: inline-block;
+}
+.home__main .home__left__welcome {
+  opacity: 0;
+  font-size: 3.8vw;
+  width: 23vw;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: welcomeTypeWriter 1s steps(12) forwards, cursor 0.4s step-end 12 alternate;
+}
 .home__main .home__left__welcome::before {
   content: "Hello ";
   color: var(--color-orange);
 }
-.home__main .home__left__welcome::before {
-  content: "​";
-  content: "​"/"Red";
-  alt: "Red";
-  white-space: break-spaces;
-  will-change: content;
-  animation: typed-0 7.62s linear 1s infinite forwards;
+@keyframes welcomeTypeWriter {
+  0% {
+    opacity: 1;
+    width: 0;
+    border-right: 3px solid black;
+  }
+  99% {
+    width: 23vw;
+    border-right: 3px solid black;
+  }
+  100% {
+    opacity: 1;
+    border-right: 0px solid black;
+  }
 }
-.home__main .home__left__welcome::after {
-  content: "​";
-  position: relative;
-  display: inline-block;
-  padding-right: 0.1ch;
-  border-right: 1ch solid currentColor;
+.home__main .home__left__name {
+  opacity: 0;
+  width: 42vw;
+  font-size: 3.7vw;
+  overflow: hidden;
+  margin-bottom: 3vh;
   white-space: nowrap;
-  animation: typed-0-caret 0.75s linear 1s infinite forwards;
-}
-@keyframes typed-0 {
-  0%, 1.311335958% {
-    content: "​R";
-    content: "​R"/"Red";
-    alt: "Red";
-    color: #e53935;
-    color: #e53935;
-  }
-  1.312335958%, 2.623671916% {
-    content: "​Re";
-    content: "​Re"/"Red";
-    alt: "Red";
-    color: #e53935;
-    color: #e53935;
-  }
-  2.624671916%, 31.2325958005% {
-    content: "​Red";
-    content: "​Red"/"Red";
-    alt: "Red";
-    color: #e53935;
-    color: #e53935;
-  }
-  31.2335958005%, 32.2824645669% {
-    content: "​Re";
-    content: "​Re"/"Red";
-    alt: "Red";
-    color: #e53935;
-    color: #e53935;
-  }
-  32.2834645669%, 33.3323333333% {
-    content: "​R";
-    content: "​R"/"Red";
-    alt: "Red";
-    color: #e53935;
-    color: #e53935;
-  }
-  33.3333333333%, 46.4556929134% {
-    content: "​";
-    content: "​"/"Red";
-    alt: "Red";
-    color: #e53935;
-    color: #e53935;
-  }
-  46.4566929134%, 47.7680288714% {
-    content: "​O";
-    content: "​O"/"Red";
-    alt: "Red";
-    color: #f4511e;
-    color: #f4511e;
-  }
-  47.7690288714%, 49.0803648294% {
-    content: "​Or";
-    content: "​Or"/"Red";
-    alt: "Red";
-    color: #f4511e;
-    color: #f4511e;
-  }
-  49.0813648294%, 50.3927007874% {
-    content: "​Ora";
-    content: "​Ora"/"Red";
-    alt: "Red";
-    color: #f4511e;
-    color: #f4511e;
-  }
-  50.3937007874%, 51.7050367454% {
-    content: "​Oran";
-    content: "​Oran"/"Red";
-    alt: "Red";
-    color: #f4511e;
-    color: #f4511e;
-  }
-  51.7060367454%, 53.0173727034% {
-    content: "​Orang";
-    content: "​Orang"/"Red";
-    alt: "Red";
-    color: #f4511e;
-    color: #f4511e;
-  }
-  53.0183727034%, 81.6262965879% {
-    content: "​Orange";
-    content: "​Orange"/"Red";
-    alt: "Red";
-    color: #f4511e;
-    color: #f4511e;
-  }
-  81.6272965879%, 82.6761653543% {
-    content: "​Orang";
-    content: "​Orang"/"Red";
-    alt: "Red";
-    color: #f4511e;
-    color: #f4511e;
-  }
-  82.6771653543%, 83.7260341207% {
-    content: "​Oran";
-    content: "​Oran"/"Red";
-    alt: "Red";
-    color: #f4511e;
-    color: #f4511e;
-  }
-  83.7270341207%, 84.7759028871% {
-    content: "​Ora";
-    content: "​Ora"/"Red";
-    alt: "Red";
-    color: #f4511e;
-    color: #f4511e;
-  }
-  84.7769028871%, 85.8257716535% {
-    content: "​Or";
-    content: "​Or"/"Red";
-    alt: "Red";
-    color: #f4511e;
-    color: #f4511e;
-  }
-  85.8267716535%, 86.8756404199% {
-    content: "​O";
-    content: "​O"/"Red";
-    alt: "Red";
-    color: #f4511e;
-    color: #f4511e;
-  }
-  86.8766404199%, 100% {
-    content: "​";
-    content: "​"/"Red";
-    alt: "Red";
-    color: #f4511e;
-    color: #f4511e;
-  }
-}
-@keyframes typed-0-caret {
-  75% {
-    border-color: transparent;
-  }
+  animation: nameTypeWriter 2s 1.2s steps(22) forwards, cursor 0.4s step-end 22 alternate;
 }
 .home__main .home__left__name::before {
   content: "I'm ";
   color: var(--color-orange);
 }
+@keyframes nameTypeWriter {
+  0% {
+    opacity: 1;
+    width: 0;
+    border-right: 3px solid black;
+  }
+  99% {
+    width: 42vw;
+    border-right: 3px solid black;
+  }
+  100% {
+    opacity: 1;
+    border-right: 0px solid black;
+  }
+}
 .home__main .home__left__bio {
-  padding-top: 7vh;
+  text-align: justify;
+  width: 43vw;
+  opacity: 0;
+  animation: bioAnimation 1s 3.5s forwards;
+}
+@keyframes bioAnimation {
+  from {
+    opacity: 0;
+    margin-top: 7vh;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0.5vh;
+  }
 }
 .home__main .home__left__contact {
   display: inline-flex;
@@ -205,10 +119,28 @@
   padding: 5vh 0;
 }
 .home__main .home__left__contact svg {
-  margin: 0 1vw;
+  margin: 0vh 1vw 0 1vw;
+  opacity: 0;
+  background-color: rgba(255, 182, 0, 0.6);
+  border-radius: 50%;
+  padding: 10px;
+  animation: svgAnimation 1s 5s forwards;
 }
 .home__main .home__left__contact svg:hover {
+  transform: scale(1.2, 1.2) rotate(360deg);
+  transition: transform 0.5s;
+  background-color: var(--color-orange);
   cursor: pointer;
+}
+@keyframes svgAnimation {
+  from {
+    opacity: 0;
+    margin-top: 7vh;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
 }
 .home__main .home__portrait {
   display: flex;
@@ -220,12 +152,18 @@
   width: 50vh;
   height: 50vh;
 }
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
 
 @media only screen and (max-width: 1000px) {
   .home {
     height: auto;
   }
   .home__main {
+    height: auto;
     flex-direction: column;
   }
   .home__main .home__left,

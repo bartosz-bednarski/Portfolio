@@ -1,9 +1,9 @@
-@import "../../scss/globals/typed.scss";
 .home {
   display: flex;
   box-sizing: border-box;
   height: 100vh;
   padding: 20vh 5vw 15vh 5vw;
+  background-color: var(--background-color);
 }
 // @keyframes position-typing {
 //   from {
@@ -32,17 +32,15 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-
-    &__position {
-      position: relative;
+    margin-top: 9vh;
+    &-position {
+      position: absolute;
       width: auto;
       height: 2vh;
       font-size: 24px;
       margin: 0 0 4vh 160px;
-      // animation: position-typing 4s steps(40, end),
-      //   blink-caret 0.75s step-end infinite;
     }
-    &__position::before {
+    &-position::before {
       content: "";
       display: flex;
       position: absolute;
@@ -52,31 +50,86 @@
       height: 1px;
       background-color: var(--color-black);
     }
+
+    &__w-box,
+    &__n-box,
+    &__p-box {
+      display: inline-block;
+    }
+
+    &__welcome {
+      opacity: 0;
+      font-size: 3.8vw;
+      width: 23vw;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: welcomeTypeWriter 1s steps(12) forwards,
+        cursor 0.4s step-end 12 alternate;
+    }
+
     &__welcome::before {
       content: "Hello ";
       color: var(--color-orange);
     }
-    &__welcome {
-      @include typed(
-        (
-          "Red": (
-            color: #e53935,
-          ),
-          "Orange": (
-            color: #f4511e,
-          ),
-        ),
-        [ null,
-        null,
-        ]
-      );
+    @keyframes welcomeTypeWriter {
+      0% {
+        opacity: 1;
+        width: 0;
+        border-right: 3px solid black;
+      }
+      99% {
+        width: 23vw;
+        border-right: 3px solid black;
+      }
+      100% {
+        opacity: 1;
+        border-right: 0px solid black;
+      }
+    }
+    &__name {
+      opacity: 0;
+      width: 42vw;
+      font-size: 3.7vw;
+      overflow: hidden;
+      margin-bottom: 3vh;
+      white-space: nowrap;
+      animation: nameTypeWriter 2s 1.2s steps(22) forwards,
+        cursor 0.4s step-end 22 alternate;
     }
     &__name::before {
       content: "I'm ";
       color: var(--color-orange);
     }
+    @keyframes nameTypeWriter {
+      0% {
+        opacity: 1;
+        width: 0;
+        border-right: 3px solid black;
+      }
+      99% {
+        width: 42vw;
+        border-right: 3px solid black;
+      }
+      100% {
+        opacity: 1;
+        border-right: 0px solid black;
+      }
+    }
     &__bio {
-      padding-top: 7vh;
+      text-align: justify;
+      width: 43vw;
+      opacity: 0;
+      animation: bioAnimation 1s 3.5s forwards;
+    }
+    @keyframes bioAnimation {
+      from {
+        opacity: 0;
+        margin-top: 7vh;
+      }
+      to {
+        opacity: 1;
+        margin-top: 0.5vh;
+      }
     }
     &__contact {
       display: inline-flex;
@@ -87,10 +140,28 @@
       padding: 0 12vw 0 0;
       padding: 5vh 0;
       svg {
-        margin: 0 1vw;
+        margin: 0vh 1vw 0 1vw;
+        opacity: 0;
+        background-color: rgba(255, 182, 0, 0.6);
+        border-radius: 50%;
+        padding: 10px;
+        animation: svgAnimation 1s 5s forwards;
       }
       svg:hover {
+        transform: scale(1.2, 1.2) rotate(360deg);
+        transition: transform 0.5s;
+        background-color: var(--color-orange);
         cursor: pointer;
+      }
+    }
+    @keyframes svgAnimation {
+      from {
+        opacity: 0;
+        margin-top: 7vh;
+      }
+      to {
+        opacity: 1;
+        margin-top: 0;
       }
     }
   }
@@ -104,6 +175,11 @@
       height: 50vh;
     }
   }
+  @keyframes cursor {
+    50% {
+      border-color: transparent;
+    }
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -111,6 +187,7 @@
     height: auto;
   }
   .home__main {
+    height: auto;
     flex-direction: column;
     .home__left,
     .home__portrait {
