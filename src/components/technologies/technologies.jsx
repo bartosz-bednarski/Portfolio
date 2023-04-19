@@ -2,14 +2,12 @@ import classes from "./technologies.module.scss";
 const Technologies = () => {
   return (
     <div className={classes.technologies}>
-      <div className={classes["technologies__h1-box"]}>
-        <h1 className={classes["technologies__header__one"]}>and</h1>
-      </div>
-      <div className={classes["technologies__h2-box"]}>
-        <h1 className={classes["technologies__header__two"]}>
-          used in my Projects
-        </h1>
-      </div>
+      <h1 className={classes["technologies__header__one"]}>and</h1>
+
+      <h1 className={classes["technologies__header__two"]}>
+        used in my Projects
+      </h1>
+
       <main className={classes["technologies__main"]}>
         <div className={classes["main__col-1"]}>
           <h2>Languages</h2>

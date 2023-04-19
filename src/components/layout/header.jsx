@@ -33,7 +33,19 @@ const Header = () => {
             </a>
           </Link>
         </li>
-        <li>Projects</li>
+        <li>
+          <Link legacyBehavior href="/projects">
+            <a
+              className={
+                router.pathname == "/projects"
+                  ? classes["link__active"]
+                  : classes["link__disactive"]
+              }
+            >
+              Projects
+            </a>
+          </Link>
+        </li>
         <li>Education</li>
       </ul>
       <button>Download CV</button>

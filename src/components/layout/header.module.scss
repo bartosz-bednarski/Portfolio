@@ -1,5 +1,4 @@
 .header-container {
-  position: fixed;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -8,8 +7,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 2vw;
-  margin-bottom: 10vh;
   z-index: 100;
+  font-weight: 600;
+  background-color: var(--background-color);
   ul {
     list-style-type: none;
 
