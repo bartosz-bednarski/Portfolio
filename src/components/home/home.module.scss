@@ -1,136 +1,113 @@
+@keyframes headerTypeWriter {
+  0% {
+    opacity: 1;
+    width: 0;
+    border-right: 3px solid black;
+  }
+  99% {
+    width: 100%;
+    border-right: 3px solid black;
+  }
+  100% {
+    opacity: 1;
+    border-right: 0px solid black;
+  }
+}
+@keyframes bioAnimation {
+  from {
+    opacity: 0;
+    margin-top: 7vh;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0.5vh;
+  }
+}
+@keyframes svgAnimation {
+  from {
+    opacity: 0;
+    margin-top: 7vh;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
 .home {
   display: flex;
   box-sizing: border-box;
-  height: 90vh;
-  padding: 10vh 5vw 15vh 5vw;
-  background-color: var(--background-color);
-}
-// @keyframes position-typing {
-//   from {
-//     width: 0%;
-//   }
-//   to {
-//     width: 100%;
-//   }
-// }
-// @keyframes blink-caret {
-//   from,
-//   to {
-//     border-color: transparent;
-//   }
-//   50% {
-//     border-color: orange;
-//   }
-// }
-.home__main {
-  display: flex;
   flex-direction: row;
-  height: 50vh;
+  height: 90vh;
+  padding: 10vh 5vw 5vh 5vw;
   width: 100%;
-
-  .home__left {
+  background-color: var(--background-color);
+  &__position {
+    position: absolute;
+    width: auto;
+    height: 2vh;
+    font-size: 24px;
+    margin: 0 0 4vh 160px;
+  }
+  &__position::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 15px;
+    left: -160px;
+    width: 146px;
+    height: 1px;
+    background-color: var(--color-black);
+  }
+  &__left {
     display: flex;
     flex-direction: column;
     width: 50%;
     margin-top: 9vh;
-    &-position {
-      position: absolute;
-      width: auto;
-      height: 2vh;
-      font-size: 24px;
-      margin: 0 0 4vh 160px;
-    }
-    &-position::before {
-      content: "";
-      display: flex;
-      position: absolute;
-      top: 15px;
-      left: -160px;
-      width: 146px;
-      height: 1px;
-      background-color: var(--color-black);
+    &__header-box {
+      width: min-content;
+      &__welcome {
+        opacity: 0;
+        font-size: 64px;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: headerTypeWriter 1s steps(12) forwards,
+          cursor 0.4s step-end 12 alternate;
+      }
+
+      &__welcome::before {
+        content: "Hello ";
+        color: var(--color-orange);
+      }
+
+      &__name {
+        opacity: 0;
+        width: 100%;
+        font-size: 64px;
+        overflow: hidden;
+        margin-bottom: 3vh;
+        white-space: nowrap;
+        animation: headerTypeWriter 2s 1.2s steps(22) forwards,
+          cursor 0.4s step-end 22 alternate;
+      }
+      &__name::before {
+        content: "I'm ";
+        color: var(--color-orange);
+      }
     }
 
-    &__w-box,
-    &__n-box,
-    &__p-box {
-      display: inline-block;
-    }
-
-    &__welcome {
-      opacity: 0;
-      font-size: 3.8vw;
-      width: 23vw;
-      overflow: hidden;
-      white-space: nowrap;
-      animation: welcomeTypeWriter 1s steps(12) forwards,
-        cursor 0.4s step-end 12 alternate;
-    }
-
-    &__welcome::before {
-      content: "Hello ";
-      color: var(--color-orange);
-    }
-    @keyframes welcomeTypeWriter {
-      0% {
-        opacity: 1;
-        width: 0;
-        border-right: 3px solid black;
-      }
-      99% {
-        width: 23vw;
-        border-right: 3px solid black;
-      }
-      100% {
-        opacity: 1;
-        border-right: 0px solid black;
-      }
-    }
-    &__name {
-      opacity: 0;
-      width: 42vw;
-      font-size: 3.7vw;
-      overflow: hidden;
-      margin-bottom: 3vh;
-      white-space: nowrap;
-      animation: nameTypeWriter 2s 1.2s steps(22) forwards,
-        cursor 0.4s step-end 22 alternate;
-    }
-    &__name::before {
-      content: "I'm ";
-      color: var(--color-orange);
-    }
-    @keyframes nameTypeWriter {
-      0% {
-        opacity: 1;
-        width: 0;
-        border-right: 3px solid black;
-      }
-      99% {
-        width: 42vw;
-        border-right: 3px solid black;
-      }
-      100% {
-        opacity: 1;
-        border-right: 0px solid black;
-      }
-    }
     &__bio {
       text-align: justify;
-      width: 43vw;
+      width: 100%;
       opacity: 0;
       animation: bioAnimation 1s 3.5s forwards;
     }
-    @keyframes bioAnimation {
-      from {
-        opacity: 0;
-        margin-top: 7vh;
-      }
-      to {
-        opacity: 1;
-        margin-top: 0.5vh;
-      }
-    }
+
     &__contact {
       display: inline-flex;
       width: 100%;
@@ -154,44 +131,81 @@
         cursor: pointer;
       }
     }
-    @keyframes svgAnimation {
-      from {
-        opacity: 0;
-        margin-top: 7vh;
-      }
-      to {
-        opacity: 1;
-        margin-top: 0;
-      }
-    }
   }
-  .home__portrait {
+  &__portrait {
     display: flex;
     width: 50%;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    animation: svgAnimation 1s 5s forwards;
     img {
       width: 50vh;
       height: 50vh;
     }
   }
-  @keyframes cursor {
-    50% {
-      border-color: transparent;
+}
+
+@media only screen and (max-width: 1500px) {
+  .home {
+    height: auto;
+    flex-direction: column;
+    padding: 10vh 10vw 5vh 10vw;
+    &__left {
+      width: 100%;
+    }
+    &__portrait {
+      width: 100%;
     }
   }
 }
-
-@media only screen and (max-width: 1000px) {
-  .home {
-    height: auto;
+@media only screen and (max-width: 900px) {
+  .home__position {
+    font-size: 20px;
   }
-  .home__main {
-    height: auto;
-    flex-direction: column;
-    .home__left,
-    .home__portrait {
-      width: 100%;
+  .home__left__header-box__welcome,
+  .home__left__header-box__name {
+    font-size: 42px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .home__position {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  .home__left__header-box__welcome,
+  .home__left__header-box__name {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .home__position {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    margin-left: 130px;
+  }
+  .home__position::before {
+    position: absolute;
+    top: 15px;
+    left: -130px;
+    width: 100px;
+    height: 1px;
+    background-color: var(--color-black);
+  }
+  .home__left__header-box__welcome,
+  .home__left__header-box__name {
+    font-size: 22px;
+  }
+  .home__left__bio {
+    font-size: 12px;
+    line-height: 27px;
+  }
+  .home__portrait {
+    img {
+      width: 80%;
+      height: 80%;
     }
   }
 }

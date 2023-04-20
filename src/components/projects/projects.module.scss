@@ -3,14 +3,14 @@
     border-color: transparent;
   }
 }
-@keyframes header-1TypeWriter {
+@keyframes header-TypeWriter {
   0% {
     opacity: 1;
     width: 0;
     border-right: 3px solid black;
   }
   99% {
-    width: 18vw;
+    width: 100%;
     border-right: 3px solid black;
   }
   100% {
@@ -18,33 +18,49 @@
     border-right: 0px solid black;
   }
 }
+@keyframes project-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 .projects {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 10vh;
-  padding: 10vh 5vw 0 5vw;
-  height: 100vh;
-  &__title {
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 18vw;
-    opacity: 0;
-    font-size: 3vw;
-    animation: header-1TypeWriter 1s steps(16) forwards,
-      cursor 0.4s step-end 16 alternate;
+  padding: 10vh 10vw 15vh 10vw;
+  height: auto;
+  &__header-box {
+    width: min-content;
+    &__title {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      opacity: 0;
+      font-size: 48px;
+      animation: header-TypeWriter 1s steps(16) forwards,
+        cursor 0.4s step-end 16 alternate;
+    }
+    &__title::before {
+      content: "My ";
+      color: var(--color-orange);
+    }
   }
-  &__title::before {
-    content: "My ";
-    color: var(--color-orange);
-  }
+
   &__project {
+    position: relative;
     box-sizing: border-box;
     padding: 2vh 2vw;
     display: flex;
     flex-direction: row;
-    width: 80vw;
+    width: 100%;
     margin: 0 auto;
     height: auto;
     gap: 5%;
@@ -52,6 +68,8 @@
     background-color: var(--background-color);
     border-radius: 25px;
     box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+    opacity: 0;
+    animation: project-in 0.7s 1.3s forwards;
     &__img {
       width: 50%;
       border-radius: 25px;
@@ -74,7 +92,8 @@
       }
       &__button {
         margin: 4vh 0 0 0;
-        width: max-content;
+        width: 16vw;
+        height: 40px;
         padding: 1vh 2vw;
       }
       &__icons {
@@ -83,6 +102,76 @@
         gap: 1vw;
         &__item {
           height: 40px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .projects {
+    &__project {
+      flex-direction: row;
+      align-items: center;
+      gap: 5vh;
+      padding-bottom: 10vh;
+      &__img {
+        width: 70%;
+      }
+      &__details {
+        flex-direction: column;
+        width: 100%;
+        &__title {
+          font-size: 32px;
+          font-weight: 600;
+        }
+        &__timeline {
+          font-size: 16px;
+        }
+        &__button {
+          font-size: 16px;
+        }
+        &__icons {
+          position: absolute;
+          bottom: 20px;
+          left: 22vw;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: row;
+          &__item {
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .projects {
+    &__project {
+      flex-direction: column;
+      align-items: center;
+      gap: 5vh;
+      padding-bottom: 0vh;
+      &__img {
+        width: 90%;
+      }
+      &__details {
+        border-left: none;
+        border-top: 3px solid var(--color-orange);
+        flex-wrap: wrap;
+        align-items: center;
+        width: 80%;
+        padding: 3vh 0;
+        &__icons {
+          position: absolute;
+          top: 10vh;
+          left: 94%;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          &__item {
+            height: 2vw;
+          }
         }
       }
     }

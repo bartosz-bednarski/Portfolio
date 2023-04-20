@@ -1,11 +1,21 @@
+import { useEffect, useState } from "react";
 import classes from "./project.module.scss";
-const Project = () => {
+const Project = (props) => {
+  // useEffect(() => {
+  //   setData(props.data);
+  // });
+  // const [data, setData] = useState(props.data);
+  console.log(props.data);
   return (
     <div className={classes.project}>
-      <h1 className={classes["project__title"]}>Plan.This</h1>
+      <div className={classes["project__title-container"]}>
+        <h1 className={classes["project__title-container__title"]}>
+          {props.data.name}
+        </h1>
+      </div>
       <div className={classes["project__top-container"]}>
         <img
-          src="/assets/plan-this.png"
+          src={props.data.mainImg}
           className={classes["project__top-container__img"]}
         />
         <div className={classes["project__top-container__technologies"]}>
@@ -14,102 +24,67 @@ const Project = () => {
           >
             nologies
           </h2>
+
           <ul className={classes["project__top-container__technologies__list"]}>
-            <li>React</li>
-            <li>React Redux</li>
-            <li>React Router</li>
-            <li>JavaScript</li>
-            <li>CSS</li>
-            <li>HTML</li>
-            <li>Google Firebase RealTime Database</li>
-            <li>Google Firebase Authentication</li>
-            <li>React-Calendar</li>
+            {props.data.technologiesList.map((item) => {
+              return <li>{item}</li>;
+            })}
           </ul>
           <div
             className={
               classes["project__top-container__technologies__button-box"]
             }
           >
-            <button
-              className={
-                classes[
-                  "project__top-container__technologies__button-box__button"
-                ]
-              }
-            >
-              <img
-                src="/assets/github.svg"
+            <a href={props.data.live}>
+              <button
                 className={
                   classes[
-                    "project__top-container__technologies__button-box__button__img"
+                    "project__top-container__technologies__button-box__button"
                   ]
                 }
-              />
-              Live
-            </button>
-            <button
-              className={
-                classes[
-                  "project__top-container__technologies__button-box__button"
-                ]
-              }
-            >
-              <img
-                src="/assets/github.svg"
+              >
+                <img
+                  src="/assets/icons/github.svg"
+                  className={
+                    classes[
+                      "project__top-container__technologies__button-box__button__img"
+                    ]
+                  }
+                />
+                Live
+              </button>
+            </a>
+            <a href={props.data.repo}>
+              <button
                 className={
                   classes[
-                    "project__top-container__technologies__button-box__button__img"
+                    "project__top-container__technologies__button-box__button"
                   ]
                 }
-              />
-              Repository
-            </button>
+              >
+                <img
+                  src="/assets/icons/github.svg"
+                  className={
+                    classes[
+                      "project__top-container__technologies__button-box__button__img"
+                    ]
+                  }
+                />
+                Repository
+              </button>
+            </a>
           </div>
           <div
             className={classes["project__top-container__technologies__icons"]}
           >
-            <img
-              src="/assets/html5.svg"
-              className={
-                classes["project__top-container__technologies__icons__icon"]
-              }
-            />
-            <img
-              src="/assets/file-type-css.svg"
-              className={
-                classes["project__top-container__technologies__icons__icon"]
-              }
-            />
-            <img
-              src="/assets/typescript-icon.svg"
-              className={
-                classes["project__top-container__technologies__icons__icon"]
-              }
-            />
-            <img
-              src="/assets/react.svg"
-              className={
-                classes["project__top-container__technologies__icons__icon"]
-              }
-            />
-            <img
-              src="/assets/redux-original.svg"
-              className={
-                classes["project__top-container__technologies__icons__icon"]
-              }
-            />
-            <img
-              src="/assets/react-router.svg"
-              className={
-                classes["project__top-container__technologies__icons__icon"]
-              }
-            />
-            <img
-              src="/assets/file-type-firebase.svg"
-              className={
-                classes["project__top-container__technologies__icons__icon"]
-              }
-            />
+            {props.data.icons.map((item) => (
+              <img
+                src={item}
+                className={
+                  classes["project__top-container__technologies__icons__icon"]
+                }
+              />
+            ))}
           </div>
         </div>
       </div>
@@ -118,55 +93,22 @@ const Project = () => {
           the project
         </h2>
         <span className={classes["project__bottom-container__about"]}>
-          Plan.this-Project is a website build with React to set up daily tasks
-          and plan your food menu.
+          {props.data.about}
         </span>
 
         <ul className={classes["project__bottom-container__list"]}>
-          <li>
-            Website uses React Router to navigate between routes and helps to
-            protect before unauthorized access to them.
-          </li>
-          <li>
-            Some of the components logic was created with React Redux to get
-            cleaner code and to store actions logic in Redux store.
-          </li>
-          <li>Authentication is provided by Google Firebase Authentication.</li>
-          <li>
-            Website uses Google Firebase RealTime Database to store users data
-            which was committed during the interaction on the page.
-          </li>
-          <li>
-            Setting date chosen by user is made with use of react calendar,
-            where date is being set up, and gets updated in redux store.
-          </li>
-          <li>
-            Adding daily meals at food route is possible by writing the recipe
-            manually or picking it from the menu component.
-          </li>
-          <li>
-            Menu component gives possibility to store meals data and get quick
-            access to them.
-          </li>
+          {props.data.aboutList.map((item) => (
+            <li>{item}</li>
+          ))}
         </ul>
       </div>
       <div className={classes["project__gallery-container"]}>
-        <img
-          src="/assets/plan-this-02.PNG"
-          className={classes["project__gallery-container__img"]}
-        />
-        <img
-          src="/assets/plan-this-03.PNG"
-          className={classes["project__gallery-container__img"]}
-        />
-        <img
-          src="/assets/plan-this-04.PNG"
-          className={classes["project__gallery-container__img"]}
-        />
-        <img
-          src="/assets/plan-this-05.PNG"
-          className={classes["project__gallery-container__img"]}
-        />
+        {props.data.gallery.map((item) => (
+          <img
+            src={item}
+            className={classes["project__gallery-container__img"]}
+          />
+        ))}
       </div>
     </div>
   );
