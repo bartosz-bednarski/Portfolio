@@ -18,6 +18,10 @@ const Project = (props) => {
           src={props.data.mainImg}
           className={classes["project__top-container__img"]}
         />
+        <img
+          src={props.data.mainImgMobile}
+          className={classes["project__top-container__img-mobile"]}
+        />
         <div className={classes["project__top-container__technologies"]}>
           <h2
             className={classes["project__top-container__technologies__header"]}
@@ -107,6 +111,12 @@ const Project = (props) => {
           <img
             src={item}
             className={classes["project__gallery-container__img"]}
+          />
+        ))}
+        {props.data.mobileGallery.map((item) => (
+          <img
+            src={item}
+            className={classes["project__gallery-container__img-mobile"]}
           />
         ))}
       </div>

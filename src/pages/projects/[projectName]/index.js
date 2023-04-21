@@ -4,6 +4,7 @@ const ProjectName = {
   "plan-this": {
     name: "Plan.This",
     mainImg: "/assets/plan-this/plan-this.png",
+    mainImgMobile: "/assets/plan-this/01_mobile.png",
     technologiesList: [
       "React",
       "React Redux",
@@ -41,12 +42,18 @@ const ProjectName = {
       "/assets/plan-this/plan-this-04.PNG",
       "/assets/plan-this/plan-this-05.PNG",
     ],
+    mobileGallery: [
+      "/assets/plan-this/01_mobile.png",
+      "/assets/plan-this/02_mobile.png",
+      "/assets/plan-this/03_mobile.png",
+    ],
     live: "https://bartosz-bednarski.github.io/Plan.this-Project/",
     repo: "https://github.com/bartosz-bednarski/Plan.this-Project",
   },
   "paintings-store": {
     name: "Paintings-store",
     mainImg: "/assets/paintings-store/01.PNG",
+    mainImgMobile: "/assets/paintings-store/01_mobile.jpg",
     technologiesList: [
       "React",
       "JavaScript",
@@ -76,12 +83,18 @@ const ProjectName = {
       "/assets/paintings-store/04.PNG",
       "/assets/paintings-store/05.PNG",
     ],
+    mobileGallery: [
+      "/assets/paintings-store/01_mobile.jpg",
+      "/assets/paintings-store/02_mobile.jpg",
+      "/assets/paintings-store/03_mobile.jpg",
+    ],
     live: "https://bartosz-bednarski.github.io/Paintings-store-project/",
     repo: "https://github.com/bartosz-bednarski/Paintings-store-project",
   },
   youTube: {
     name: "YouTube",
     mainImg: "/assets/youtube/05.png",
+    mainImgMobile: "/assets/youtube/01_mobile.jpg",
     technologiesList: [
       "JavaScript",
       "Sass",
@@ -113,12 +126,18 @@ const ProjectName = {
       "/assets/youtube/04.png",
       "/assets/youtube/01.png",
     ],
+    mobileGallery: [
+      "/assets/youtube/01_mobile.jpg",
+      "/assets/youtube/02_mobile.jpg",
+      "/assets/youtube/03_mobile.jpg",
+    ],
     live: "https://bartosz-bednarski.github.io/YouTube-Project/",
     repo: "https://github.com/bartosz-bednarski/YouTube-Project",
   },
   restaurant: {
     name: "Restaurant",
     mainImg: "/assets/restaurant/01.png",
+    mainImgMobile: "/assets/restaurant/01_mobile.jpg",
     technologiesList: ["JavaScript", "CSS", "HTML"],
     icons: [
       "/assets/icons/file-type-js-official.svg",
@@ -136,6 +155,11 @@ const ProjectName = {
       "Icons used in footer sections were downloaded from : Icon Pack: Social Media | Flat created by Ruslan Babkin - Flaticon",
     ],
     gallery: ["/assets/restaurant/02.png", "/assets/restaurant/03.png"],
+    mobileGallery: [
+      "/assets/restaurant/01_mobile.jpg",
+      "/assets/restaurant/02_mobile.jpg",
+      "/assets/restaurant/03_mobile.jpg",
+    ],
     live: "https://bartosz-bednarski.github.io/Restaurant-Project/",
     repo: "https://github.com/bartosz-bednarski/Restaurant-Project",
   },

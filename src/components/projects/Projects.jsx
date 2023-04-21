@@ -6,6 +6,7 @@ const projects = [
     name: "Plan.This",
     id: "plan-this",
     mainImg: "/assets/plan-this/plan-this.png",
+    mobileMainImg: "/assets/plan-this/01_mobile.png",
     icons: [
       "/assets/icons/html5.svg",
       "/assets/icons/file-type-css.svg",
@@ -22,6 +23,7 @@ const projects = [
     name: "Paintings-store",
     id: "paintings-store",
     mainImg: "/assets/paintings-store/01.PNG",
+    mobileMainImg: "/assets/paintings-store/01_mobile.jpg",
     icons: [
       "/assets/icons/html5.svg",
       "/assets/icons/file-type-css.svg",
@@ -36,6 +38,7 @@ const projects = [
     name: "Youtube",
     id: "youTube",
     mainImg: "/assets/youtube/05.png",
+    mobileMainImg: "/assets/youtube/01_mobile.jpg",
     icons: [
       "/assets/icons/file-type-js-official.svg",
       "/assets/icons/sass-original.svg",
@@ -50,6 +53,7 @@ const projects = [
     name: "Restaurant",
     id: "restaurant",
     mainImg: "/assets/restaurant/01.png",
+    mobileMainImg: "/assets/restaurant/01_mobile.jpg",
     icons: [
       "/assets/icons/file-type-js-official.svg",
       "/assets/icons/file-type-css.svg",
@@ -73,6 +77,10 @@ const Projects = () => {
             <img
               src={item.mainImg}
               className={classes["projects__project__img"]}
+            />
+            <img
+              src={item.mobileMainImg}
+              className={classes["projects__project__img-mobile"]}
             />
             <div className={classes["projects__project__details"]}>
               <span className={classes["projects__project__details__title"]}>
