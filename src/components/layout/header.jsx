@@ -27,7 +27,10 @@ const Header = () => {
           {showList && (
             <>
               <ul className={classes["header__hamburger__list"]}>
-                <li className={classes["header__hamburger__list__item"]}>
+                <li
+                  className={classes["header__hamburger__list__item"]}
+                  onClick={() => setShowList(false)}
+                >
                   <Link legacyBehavior href="/">
                     <a
                       className={
@@ -40,7 +43,10 @@ const Header = () => {
                     </a>
                   </Link>
                 </li>
-                <li className={classes["header__hamburger__list__item"]}>
+                <li
+                  className={classes["header__hamburger__list__item"]}
+                  onClick={() => setShowList(false)}
+                >
                   <Link legacyBehavior href="/technologies">
                     <a
                       className={
@@ -53,7 +59,10 @@ const Header = () => {
                     </a>
                   </Link>
                 </li>
-                <li className={classes["header__hamburger__list__item"]}>
+                <li
+                  className={classes["header__hamburger__list__item"]}
+                  onClick={() => setShowList(false)}
+                >
                   <Link legacyBehavior href="/projects">
                     <a
                       className={
@@ -66,7 +75,10 @@ const Header = () => {
                     </a>
                   </Link>
                 </li>
-                <li className={classes["header__hamburger__list__item"]}>
+                <li
+                  className={classes["header__hamburger__list__item"]}
+                  onClick={() => setShowList(false)}
+                >
                   <Link legacyBehavior href="/education">
                     <a
                       className={

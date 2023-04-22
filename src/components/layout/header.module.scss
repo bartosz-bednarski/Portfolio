@@ -20,6 +20,14 @@
     height: 15px;
   }
 }
+@keyframes hamburger-slide {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
 .header {
   box-sizing: border-box;
   display: flex;
@@ -111,6 +119,8 @@
       width: 210px;
       height: auto;
       padding-right: 10px;
+      font-weight: 500;
+      animation: 0.7s hamburger-slide;
       img {
         width: 40px;
         align-self: flex-end;
@@ -138,6 +148,7 @@
       &__list {
         text-align: end;
         list-style-type: none;
+
         &__item {
           display: block;
           text-align: end;
