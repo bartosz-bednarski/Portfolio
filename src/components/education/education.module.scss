@@ -1,14 +1,41 @@
+@keyframes headerTypeWriter {
+  0% {
+    opacity: 1;
+    width: 0;
+    border-right: 3px solid black;
+  }
+  99% {
+    width: 100%;
+    border-right: 3px solid black;
+  }
+  100% {
+    opacity: 1;
+    border-right: 0px solid black;
+  }
+}
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
 .education {
   display: flex;
   flex-direction: column;
   height: auto;
-  padding: 9vh 10vw 8.2vh 10vw;
+  padding: 9vh 10vw 7.5vh 10vw;
   gap: 5vh;
   &__header-container {
-    display: inline-block;
+    width: min-content;
     &__header {
+      display: inline-block;
+      opacity: 0;
       font-size: 42px;
       font-weight: 700;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: headerTypeWriter 1s steps(21) forwards,
+        cursor 0.4s step-end 21 alternate;
     }
     &__header::before {
       content: "Education ";

@@ -1,47 +1,3 @@
-.header-container {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 10vh;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2vw;
-  z-index: 100;
-  font-weight: 600;
-  background-color: var(--background-color);
-}
-.header-container ul {
-  list-style-type: none;
-}
-.header-container ul li {
-  display: inline;
-  margin: 0 2em;
-}
-.header-container ul li .link__active {
-  color: var(--color-orange);
-}
-.header-container ul li .link__disactive:hover::before {
-  content: "";
-  position: absolute;
-  width: 110%;
-  height: 3px;
-  background-color: rgba(255, 182, 0, 0.6);
-  transform: skewY(-4deg);
-  z-index: -1;
-  animation: belt-top 0.5s forwards;
-}
-.header-container ul li .link__disactive:hover::after {
-  content: "";
-  position: absolute;
-  left: -10%;
-  width: 110%;
-  height: 3px;
-  background-color: rgba(255, 182, 0, 0.6);
-  transform: skewY(-4deg);
-  z-index: -1;
-  animation: belt-bottom 0.5s forwards;
-}
 @keyframes belt-top {
   from {
     top: -20px;
@@ -64,21 +20,143 @@
     height: 15px;
   }
 }
-.header-container ul li .link__disactive {
+.header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 10vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vw;
+  z-index: 100;
+  font-weight: 600;
+  background-color: var(--background-color);
+}
+.header__separator {
+  display: block;
+}
+.header__hamburger {
+  display: none;
+}
+.header__list {
+  list-style-type: none;
+}
+.header__list__item {
+  display: inline;
+  margin: 0 2em;
+  font-size: 16px;
+}
+.header__list__item .link__active {
+  color: var(--color-orange);
+}
+.header__list__item .link__disactive:hover::before {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 3px;
+  background-color: rgba(255, 182, 0, 0.6);
+  transform: skewY(-4deg);
+  z-index: -1;
+  animation: belt-top 0.5s forwards;
+}
+.header__list__item .link__disactive:hover::after {
+  content: "";
+  position: absolute;
+  left: -10%;
+  width: 110%;
+  height: 3px;
+  background-color: rgba(255, 182, 0, 0.6);
+  transform: skewY(-4deg);
+  z-index: -1;
+  animation: belt-bottom 0.5s forwards;
+}
+.header__list__item .link__disactive {
   color: var(--color-black);
   position: relative;
 }
-.header-container ul li:hover {
+.header__list li:hover {
   cursor: pointer;
 }
-
-@media only screen and (max-width: 1000px) {
-  .header-container {
-    background-color: rgba(255, 255, 255, 0.9);
-  }
+.header__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  font-size: 16px;
+  padding: 10px 20px;
 }
+.header__button img {
+  margin-right: 5px;
+}
+
 @media only screen and (max-width: 800px) {
-  .header-container {
+  .header {
+    justify-content: flex-end;
+    align-items: baseline;
+    padding-right: 0;
+  }
+  .header__list {
     display: none;
+  }
+  .header__button {
+    display: none;
+  }
+  .header__hamburger--active {
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 210px;
+    height: auto;
+    padding-right: 10px;
+  }
+  .header__hamburger--active img {
+    width: 40px;
+    align-self: flex-end;
+  }
+  .header__hamburger--active img:hover {
+    cursor: pointer;
+  }
+  .header__hamburger {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    justify-content: flex-end;
+    width: 210px;
+    height: auto;
+    padding-right: 10px;
+  }
+  .header__hamburger img {
+    width: 40px;
+    align-self: flex-end;
+  }
+  .header__hamburger img:hover {
+    cursor: pointer;
+  }
+  .header__hamburger__list {
+    text-align: end;
+    list-style-type: none;
+  }
+  .header__hamburger__list__item {
+    display: block;
+    text-align: end;
+    width: 150px;
+    padding: 10px 0px;
+    margin: 0;
+    background-color: white;
+  }
+  .header__hamburger__list__item .link__active {
+    color: var(--color-orange);
+  }
+  .header__hamburger__button {
+    display: flex;
+    width: 210px;
+    border-radius: 0;
+  }
+  .header__hamburger__button img {
+    height: 24px;
   }
 }/*# sourceMappingURL=header.module.css.map */
