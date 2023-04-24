@@ -18,14 +18,15 @@ const Home = () => {
           </h1>
         </div>
         <p className={classes["home__left__bio"]}>
-          25 years old guy who wants to develop his skills with Front-end
-          programming. I started from learning HTML & CSS over 8 months ago and
-          during this time I learned a lot. I made projects where I could use
-          gained knowledge and handled with many errors I met.
+          25 year old man who wants to develop his Front-end programming skills.
+          I started learning HTML and CSS over 8 months ago, and during this
+          time, I have learned a lot. I have created projects where I could
+          apply the skills I have gained and successfully handled many errors
+          that I have encountered.
           <br />
-          <br />I am a person that likes to know how things that I use work and
-          how are they build. That's why I like programming and would like to
-          know about It much more.
+          <br /> I am a person who likes to know how things I use work and how
+          they are built. That's why I enjoy programming and would like to learn
+          more about it.
         </p>
         <span className={classes["home__left__contact"]}>
           <a href="https://www.linkedin.com/in/bartosz-bednarski-050196234/">
