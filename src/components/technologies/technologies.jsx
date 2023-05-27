@@ -72,6 +72,7 @@ const Technologies = () => {
           <h2 className={classes["technologies__cards__card__header"]}>
             Frameworks
           </h2>
+
           <span className={classes["technologies__cards__card__item"]}>
             React.js
           </span>
