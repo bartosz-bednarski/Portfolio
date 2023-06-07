@@ -55,6 +55,9 @@ const Technologies = () => {
           <span className={classes["technologies__cards__card__item"]}>
             Sass
           </span>
+          <span className={classes["technologies__cards__card__item"]}>
+            Tailwind CSS
+          </span>
           <div className={classes["technologies__cards__card__image-box"]}>
             <img
               src="/assets/icons/file-type-css.svg"
@@ -64,6 +67,11 @@ const Technologies = () => {
             <img
               src="/assets/icons/sass-original.svg"
               alt="SASS-icon"
+              className={classes["technologies__cards__card__image-box__img"]}
+            />
+            <img
+              src="/assets/icons/tailwind-css.svg"
+              alt="Tailwind-icon"
               className={classes["technologies__cards__card__image-box__img"]}
             />
           </div>
@@ -116,10 +124,10 @@ const Technologies = () => {
             Google Firebase
           </span>
           <span className={classes["technologies__cards__card__item"]}>
-            YouTube Data API v3
+            MongoDB
           </span>
           <span className={classes["technologies__cards__card__item"]}>
-            Oauth 2.0
+            YouTube Data API v3
           </span>
           <span className={classes["technologies__cards__card__item"]}>
             GIT
@@ -143,6 +151,11 @@ const Technologies = () => {
             <img
               src="/assets/icons/git.svg"
               alt="Git-icon"
+              className={classes["technologies__cards__card__image-box__img"]}
+            />
+            <img
+              src="/assets/icons/mongodb-original-wordmark.svg"
+              alt="MongoDB-icon"
               className={classes["technologies__cards__card__image-box__img"]}
             />
           </div>

@@ -3,6 +3,24 @@ import classes from "./projects.module.scss";
 
 const projects = [
   {
+    name: "Hotel",
+    id: "hotel",
+    mainImg: "/assets/hotel/01.PNG",
+    mobileMainImg: "/assets/hotel/01_mobile.png",
+    icons: [
+      "/assets/icons/html5.svg",
+      "/assets/icons/file-type-css.svg",
+      "/assets/icons/tailwind-css.svg",
+      "/assets/icons/file-type-js-official.svg",
+      "/assets/icons/typescript-icon.svg",
+      "/assets/icons/next-js.svg",
+      "/assets/icons/redux-original.svg",
+      "/assets/icons/mongodb-original-wordmark.svg",
+    ],
+    start: "25.04.2023",
+    live: "07.06.2023",
+  },
+  {
     name: "Plan.This",
     id: "plan-this",
     mainImg: "/assets/plan-this/plan-this.png",
@@ -10,6 +28,7 @@ const projects = [
     icons: [
       "/assets/icons/html5.svg",
       "/assets/icons/file-type-css.svg",
+      "/assets/icons/sass-original.svg",
       "/assets/icons/typescript-icon.svg",
       "/assets/icons/react.svg",
       "/assets/icons/redux-original.svg",

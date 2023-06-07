@@ -1,6 +1,56 @@
 import Project from "@/components/projects/project/Project";
 import { useRouter } from "next/router";
 const ProjectName = {
+  hotel: {
+    name: "Hotel",
+    mainImg: "/assets/hotel/01.PNG",
+    mainImgMobile: "/assets/hotel/01_mobile.png",
+    technologiesList: [
+      "Next.js",
+      "Redux-toolkit",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "CSS",
+      "HTML",
+      "MongoDB",
+      "React-hook-form",
+      "React-Calendar",
+    ],
+    icons: [
+      "/assets/icons/html5.svg",
+      "/assets/icons/file-type-css.svg",
+      "/assets/icons/tailwind-css.svg",
+      "/assets/icons/file-type-js-official.svg",
+      "/assets/icons/typescript-icon.svg",
+      "/assets/icons/next-js.svg",
+      "/assets/icons/redux-original.svg",
+      "/assets/icons/mongodb-original-wordmark.svg",
+    ],
+    about:
+      "Hotel Project is a hotel website built with Next.js and styled with Tailwind CSS.",
+    aboutList: [
+      "Website uses Next.js with a built-in router that provides better navigation capabilities.",
+      "Some of the components' logic was created using React Redux to achieve cleaner code and store action logic in the Redux store.",
+      "Website uses MongoDB to store room data.",
+      "The selection of check-in and check-out dates was implemented with react-calendar.",
+      "React Hook Form was utilized to validate user forms for booking rooms.",
+      "Website was styled with Tailwind CSS.",
+    ],
+    gallery: [
+      "/assets/hotel/02.PNG",
+      "/assets/hotel/03.PNG",
+      "/assets/hotel/04.PNG",
+      "/assets/hotel/05.PNG",
+    ],
+    mobileGallery: [
+      "/assets/hotel/01_mobile.png",
+      "/assets/hotel/02_mobile.png",
+      "/assets/hotel/03_mobile.png",
+    ],
+    live: "https://sapphire-palace.vercel.app/",
+    repo: "https://github.com/bartosz-bednarski/Hotel-Project",
+  },
   "plan-this": {
     name: "Plan.This",
     mainImg: "/assets/plan-this/plan-this.png",
@@ -174,6 +224,11 @@ export async function getStaticPaths() {
   return {
     fallback: false,
     paths: [
+      {
+        params: {
+          projectName: "hotel",
+        },
+      },
       {
         params: {
           projectName: "plan-this",
