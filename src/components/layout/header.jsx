@@ -63,6 +63,22 @@ const Header = () => {
                   className={classes["header__hamburger__list__item"]}
                   onClick={() => setShowList(false)}
                 >
+                  <Link legacyBehavior href="/experience">
+                    <a
+                      className={
+                        router.pathname == "/experience"
+                          ? classes["link__active"]
+                          : classes["link__disactive"]
+                      }
+                    >
+                      Technologies
+                    </a>
+                  </Link>
+                </li>
+                <li
+                  className={classes["header__hamburger__list__item"]}
+                  onClick={() => setShowList(false)}
+                >
                   <Link legacyBehavior href="/projects">
                     <a
                       className={
@@ -126,6 +142,19 @@ const Header = () => {
                 }
               >
                 Technologies
+              </a>
+            </Link>
+          </li>
+          <li className={classes["header__list__item"]}>
+            <Link legacyBehavior href="/experience">
+              <a
+                className={
+                  router.pathname == "/experience"
+                    ? classes["link__active"]
+                    : classes["link__disactive"]
+                }
+              >
+                Experience
               </a>
             </Link>
           </li>

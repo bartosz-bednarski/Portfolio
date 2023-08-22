@@ -18,11 +18,11 @@ const Home = () => {
           </h1>
         </div>
         <p className={classes["home__left__bio"]}>
-          25 year old man who wants to develop his Front-end programming skills.
-          I started learning HTML and CSS over 8 months ago, and during this
-          time, I have learned a lot. I have created projects where I could
-          apply the skills I have gained and successfully handled many errors
-          that I have encountered.
+          25 year old man currently working at GISON company as a Junior
+          Front-end Developer. <br />I started learning HTML and CSS over 8
+          months ago, and during this time, I have learned a lot. I have created
+          projects where I could apply the skills I have gained and successfully
+          handled many errors that I have encountered.
           <br />
           <br /> I am a person who likes to know how things I use work and how
           they are built. That's why I enjoy programming and would like to learn

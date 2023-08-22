@@ -18,18 +18,18 @@
     border-color: transparent;
   }
 }
-.education {
+.experience {
   display: flex;
   flex-direction: column;
   height: auto;
   padding: 9vh 10vw 7.5vh 10vw;
   gap: 5vh;
 }
-.education__header-container {
+.experience__header-container {
   width: -moz-min-content;
   width: min-content;
 }
-.education__header-container__header {
+.experience__header-container__header {
   display: inline-block;
   opacity: 0;
   font-size: 42px;
@@ -37,32 +37,32 @@
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  animation: headerTypeWriter 1s steps(21) forwards, cursor 0.4s step-end 21 alternate;
+  animation: headerTypeWriter 1s steps(17) forwards, cursor 0.4s step-end 17 alternate;
 }
-.education__header-container__header::before {
-  content: "Education ";
+.experience__header-container__header::before {
+  content: "Work & ";
   color: var(--color-orange);
 }
-.education__cards-container {
+.experience__cards-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 1%;
 }
-.education__cards-container__cards-box {
+.experience__cards-container__cards-box {
   display: flex;
   flex-direction: column;
   gap: 5vh;
   width: 45%;
 }
-.education__cards-container__cards-box__header {
+.experience__cards-container__cards-box__header {
   position: relative;
   width: 100%;
   text-align: center;
   font-weight: 600;
   font-size: 20px;
 }
-.education__cards-container__cards-box__header::before {
+.experience__cards-container__cards-box__header::before {
   content: "";
   position: absolute;
   top: 14px;
@@ -72,7 +72,7 @@
   width: 38%;
   background-color: black;
 }
-.education__cards-container__cards-box__header::after {
+.experience__cards-container__cards-box__header::after {
   content: "";
   position: absolute;
   top: 14px;
@@ -82,31 +82,36 @@
   width: 38%;
   background-color: black;
 }
-.education__cards-container__cards-box__card {
+.experience__cards-container__cards-box__card {
   display: flex;
   position: relative;
   flex-direction: column;
-  padding: 10px 20px;
-  height: 100px;
+  padding: 30px 40px;
+  height: auto;
+  min-width: 400px;
+  width: auto;
   gap: 1vh;
   border: 2px solid var(--color-orange);
   border-radius: 25px;
   box-shadow: -2px 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
-.education__cards-container__cards-box__card__title {
+.experience__cards-container__cards-box__card__title {
   font-size: 20px;
   font-weight: 600;
 }
-.education__cards-container__cards-box__card__title__orange {
+.experience__cards-container__cards-box__card__title__orange {
   color: var(--color-orange);
 }
-.education__cards-container__cards-box__card__time {
+.experience__cards-container__cards-box__card ul {
+  padding-left: 20px;
+}
+.experience__cards-container__cards-box__card__time {
   font-size: 16px;
   display: inline-flex;
   align-items: center;
   gap: 1vw;
 }
-.education__cards-container__cards-box__card__certificate {
+.experience__cards-container__cards-box__card__certificate {
   position: absolute;
   top: 45px;
   left: 120px;
@@ -117,7 +122,7 @@
   gap: 5px;
   background-color: var(--color-orange);
 }
-.education__cards-container__cards-box__card a {
+.experience__cards-container__cards-box__card a {
   position: absolute;
   top: 45px;
   left: 70px;
@@ -128,7 +133,7 @@
   gap: 5px;
   background-color: var(--color-orange);
 }
-.education__cards-container__cards-box__card__academy {
+.experience__cards-container__cards-box__card__academy {
   font-size: 16px;
 }
 
@@ -221,4 +226,4 @@
     width: max-content;
     font-size: 10px;
   }
-}/*# sourceMappingURL=education.module.css.map */
+}/*# sourceMappingURL=experience.module.css.map */
