@@ -18,11 +18,13 @@ const Home = () => {
           </h1>
         </div>
         <p className={classes["home__left__bio"]}>
-          25 year old man currently working at GISON company as a Junior
-          Front-end Developer. <br />I started learning HTML and CSS over 8
-          months ago, and during this time, I have learned a lot. I have created
-          projects where I could apply the skills I have gained and successfully
-          handled many errors that I have encountered.
+          I am a 26 years old graduate of the AGH University of Science and
+          Technology in Krakow, where I completed my degree in Materials
+          Engineering.
+          <br /> For over 1 year, I have been learning programming and
+          technologies required for a Front-end developer role. I apply the
+          knowledge I have gained to work on individual projects, where I
+          enhance my practical skills.
           <br />
           <br /> I am a person who likes to know how things I use work and how
           they are built. That's why I enjoy programming and would like to learn

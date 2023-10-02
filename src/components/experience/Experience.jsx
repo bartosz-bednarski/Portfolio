@@ -32,7 +32,7 @@ const Experience = () => {
               classes["experience__cards-container__cards-box__card__time"]
             }
           >
-            07.2023 - current
+            07.2023 - 09.2023
           </span>
           <span
             className={
@@ -90,7 +90,10 @@ const Experience = () => {
           </span>
           <ul>
             <li>Fixing JavaScript bugs</li>
+            <li>RWD</li>
+            <li>Implementing scripts into aplication from others projects</li>
             <li>Implementing components with backend cooperation</li>
+            <li>Creating online and pdf forms for local governments</li>
             <li>Styling components</li>
           </ul>
         </div>
