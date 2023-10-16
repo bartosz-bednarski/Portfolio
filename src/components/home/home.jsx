@@ -18,17 +18,22 @@ const Home = () => {
           </h1>
         </div>
         <p className={classes["home__left__bio"]}>
-          I am a 26 years old graduate of the AGH University of Science and
-          Technology in Krakow, where I completed my degree in Materials
-          Engineering.
-          <br /> For over 1 year, I have been learning programming and
-          technologies required for a Front-end developer role. I apply the
-          knowledge I have gained to work on individual projects, where I
-          enhance my practical skills.
-          <br />
-          <br /> I am a person who likes to know how things I use work and how
-          they are built. That's why I enjoy programming and would like to learn
-          more about it.
+          I am a self-taught individual who is continuously developing my skills
+          through working on individual projects where I have the opportunity to
+          apply and showcase my abilities.
+          <br /> Currently, I am working on a website that will serve as a guide
+          for the browser-based game "geoguessr."
+          <br /> The project consists of a front-end layer written in React
+          using React Router and styled with SCSS, a REST API built in Express
+          to handle database queries, and a PostgreSQL database.
+          <br /> Simultaneously, I am learning React Native, which will enable
+          me to create a mobile application for the aforementioned website. Time
+          management is crucial for me, and I use Jira to monitor progress in
+          the project.
+          <br /> Feel free to check the progress of my work on GitHub in the
+          GEOMETA repository.
+          <br /> In my spare time, I read about design patterns and tackle
+          problems on LeetCode or HackerRank.
         </p>
         <span className={classes["home__left__contact"]}>
           <a href="https://www.linkedin.com/in/bartosz-bednarski-050196234/">
