@@ -1,6 +1,63 @@
 import Project from "@/components/projects/project/Project";
 import { useRouter } from "next/router";
 const ProjectName = {
+  geometa: {
+    name: "GeoMeta",
+    mainImg: "/assets/geometa/01.PNG",
+    mainImgMobile: "/assets/geometa/01_mobile.png",
+    technologiesList: [
+      "React.js",
+      "Redux-toolkit",
+      "React-router-dom",
+      "JavaScript",
+      "Sass",
+      "Express.js",
+      "MongoDB",
+      "PostgreSQL",
+      "CSS",
+      "HTML",
+      "Github",
+      "Jira",
+    ],
+    icons: [
+      "/assets/icons/react.svg",
+      "/assets/icons/redux-original.svg",
+      "/assets/icons/react-router.svg",
+      "/assets/icons/file-type-js-official.svg",
+      "/assets/icons/sass-original.svg",
+      "/assets/icons/postgresql-plain-wordmark.svg",
+      "/assets/icons/mongodb-original-wordmark.svg",
+      "/assets/icons/express.svg",
+      "/assets/icons/github.svg",
+      "/assets/icons/jira.svg",
+    ],
+    about: "GeoMeta is an online guide for the browser game Geoguesrr.",
+    aboutList: [
+      "Frontend written in React.",
+      "Backend in the form of a REST API written in Express.",
+      "React-router-dom was used to navigate beetwen different pages.",
+      "Sass was used for styling.",
+      "Express was used to built rest-api to handle authentication/authorization and query data from databases.",
+      "MongoDB was used to store forum data.",
+      "PostgreSQL was used to store more related data like users, coutries etc.",
+      "Home - general information about the website and its content, continents",
+      "Continents - a world map with the ability to select a specific continent and view the countries it comprises. Selecting a specific country redirects to a dedicated page containing information about it, which will be expanded through tips for players of the GeoGuessr game.",
+      "Forum - a place where logged-in users can create topics with questions and engage in discussions. The option to add responses to topics is also available for non-logged-in users.",
+    ],
+    gallery: [
+      "/assets/geometa/02.PNG",
+      "/assets/geometa/03.PNG",
+      "/assets/geometa/04.PNG",
+      "/assets/geometa/05.PNG",
+    ],
+    mobileGallery: [
+      "/assets/geometa/01_mobile.png",
+      "/assets/geometa/02_mobile.png",
+      "/assets/geometa/03_mobile.png",
+    ],
+    live: "https://geo-meta.vercel.app/",
+    repo: "https://github.com/bartosz-bednarski/GEOMeta",
+  },
   hotel: {
     name: "Hotel",
     mainImg: "/assets/hotel/01.PNG",
@@ -224,6 +281,11 @@ export async function getStaticPaths() {
   return {
     fallback: false,
     paths: [
+      {
+        params: {
+          projectName: "geometa",
+        },
+      },
       {
         params: {
           projectName: "hotel",

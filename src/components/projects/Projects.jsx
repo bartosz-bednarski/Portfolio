@@ -3,6 +3,26 @@ import classes from "./projects.module.scss";
 
 const projects = [
   {
+    name: "GeoMeta",
+    id: "geometa",
+    mainImg: "/assets/geometa/01.PNG",
+    mobileMainImg: "/assets/geometa/01_mobile.png",
+    icons: [
+      "/assets/icons/react.svg",
+      "/assets/icons/redux-original.svg",
+      "/assets/icons/react-router.svg",
+      "/assets/icons/file-type-js-official.svg",
+      "/assets/icons/sass-original.svg",
+      "/assets/icons/postgresql-plain-wordmark.svg",
+      "/assets/icons/mongodb-original-wordmark.svg",
+      "/assets/icons/express.svg",
+      "/assets/icons/github.svg",
+      "/assets/icons/jira.svg",
+    ],
+    start: "18.07.2023",
+    live: "18.07.2023",
+  },
+  {
     name: "Hotel",
     id: "hotel",
     mainImg: "/assets/hotel/01.PNG",

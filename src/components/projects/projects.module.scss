@@ -101,6 +101,7 @@
       }
       &__icons {
         display: inline-flex;
+        flex-wrap: wrap;
         margin-top: 7vh;
         gap: 1vw;
         &__item {

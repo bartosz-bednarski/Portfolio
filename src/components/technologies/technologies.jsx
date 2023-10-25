@@ -45,6 +45,96 @@ const Technologies = () => {
             />
           </div>
         </div>
+
+        <div className={classes["technologies__cards__card"]}>
+          <h2
+            className={classes["technologies__cards__card__header"]}
+            style={{}}
+          >
+            Frameworks
+          </h2>
+
+          <span className={classes["technologies__cards__card__item"]}>
+            Next.js
+          </span>
+          <span className={classes["technologies__cards__card__item"]}>
+            Express.js
+          </span>
+          <div className={classes["technologies__cards__card__image-box"]}>
+            <img
+              src="/assets/icons/next-js.svg"
+              alt="NextJs-icon"
+              className={classes["technologies__cards__card__image-box__img"]}
+            />
+            <img
+              src="/assets/icons/express.svg"
+              alt="
+              Express-icon"
+              className={classes["technologies__cards__card__image-box__img"]}
+            />
+          </div>
+        </div>
+        <div className={classes["technologies__cards__card"]}>
+          <h2
+            className={classes["technologies__cards__card__header"]}
+            style={{}}
+          >
+            Libraries
+          </h2>
+
+          <span className={classes["technologies__cards__card__item"]}>
+            React.js
+          </span>
+          <span className={classes["technologies__cards__card__item"]}>
+            jQuery
+          </span>
+
+          <div className={classes["technologies__cards__card__image-box"]}>
+            <img
+              src="/assets/icons/react.svg"
+              alt="React-icon"
+              className={classes["technologies__cards__card__image-box__img"]}
+            />
+
+            <img
+              src="/assets/icons/jquery-original-wordmark.svg"
+              alt="jquery-icon"
+              className={classes["technologies__cards__card__image-box__img"]}
+            />
+          </div>
+        </div>
+        <div className={classes["technologies__cards__card"]}>
+          <h2 className={classes["technologies__cards__card__header"]}>
+            Databases
+          </h2>
+          <span className={classes["technologies__cards__card__item"]}>
+            Google Firebase
+          </span>
+          <span className={classes["technologies__cards__card__item"]}>
+            MongoDB
+          </span>
+          <span className={classes["technologies__cards__card__item"]}>
+            PostgreSQL
+          </span>
+
+          <div className={classes["technologies__cards__card__image-box"]}>
+            <img
+              src="/assets/icons/file-type-firebase.svg"
+              alt="Firebase-icon"
+              className={classes["technologies__cards__card__image-box__img"]}
+            />
+            <img
+              src="/assets/icons/mongodb-original-wordmark.svg"
+              alt="MongoDB-icon"
+              className={classes["technologies__cards__card__image-box__img"]}
+            />
+            <img
+              src="/assets/icons/postgresql-plain-wordmark.svg"
+              alt="PostgreeSql-icon"
+              className={classes["technologies__cards__card__image-box__img"]}
+            />
+          </div>
+        </div>
         <div className={classes["technologies__cards__card"]}>
           <h2 className={classes["technologies__cards__card__header"]}>
             Styling
@@ -78,25 +168,25 @@ const Technologies = () => {
         </div>
         <div className={classes["technologies__cards__card"]}>
           <h2 className={classes["technologies__cards__card__header"]}>
-            Frameworks
+            API & Tools
           </h2>
+          <span className={classes["technologies__cards__card__item"]}>
+            YouTube Data API v3
+          </span>
+          <span className={classes["technologies__cards__card__item"]}>
+            Redux Toolkit
+          </span>
+          <span className={classes["technologies__cards__card__item"]}>
+            React-router-dom
+          </span>
+          <span className={classes["technologies__cards__card__item"]}>
+            OAuth 2.0
+          </span>
 
-          <span className={classes["technologies__cards__card__item"]}>
-            React.js
-          </span>
-          <span className={classes["technologies__cards__card__item"]}>
-            Redux.js
-          </span>
-          <span className={classes["technologies__cards__card__item"]}>
-            React Router
-          </span>
-          <span className={classes["technologies__cards__card__item"]}>
-            Next.Js
-          </span>
           <div className={classes["technologies__cards__card__image-box"]}>
             <img
-              src="/assets/icons/react.svg"
-              alt="React-icon"
+              src="/assets/icons/youtube.svg"
+              alt="Youtube-icon"
               className={classes["technologies__cards__card__image-box__img"]}
             />
             <img
@@ -110,52 +200,40 @@ const Technologies = () => {
               className={classes["technologies__cards__card__image-box__img"]}
             />
             <img
-              src="/assets/icons/next-js.svg"
-              alt="NextJs-icon"
+              src="/assets/icons/oauth.svg"
+              alt="oauth-icon"
               className={classes["technologies__cards__card__image-box__img"]}
             />
           </div>
         </div>
         <div className={classes["technologies__cards__card"]}>
           <h2 className={classes["technologies__cards__card__header"]}>
-            API & other
+            Tools
           </h2>
           <span className={classes["technologies__cards__card__item"]}>
-            Google Firebase
+            GitHub
           </span>
           <span className={classes["technologies__cards__card__item"]}>
-            MongoDB
+            GitLab
           </span>
           <span className={classes["technologies__cards__card__item"]}>
-            YouTube Data API v3
+            Jira
           </span>
-          <span className={classes["technologies__cards__card__item"]}>
-            GIT
-          </span>
+
           <div className={classes["technologies__cards__card__image-box"]}>
             <img
-              src="/assets/icons/file-type-firebase.svg"
-              alt="Firebase-icon"
-              className={classes["technologies__cards__card__image-box__img"]}
-            />
-            <img
               src="/assets/icons/youtube.svg"
-              alt="Youtube-icon"
+              alt="github-icon"
               className={classes["technologies__cards__card__image-box__img"]}
             />
             <img
-              src="/assets/icons/oauth.svg"
-              alt="Oauth-icon"
+              src="/assets/icons/gitlab-original-wordmark.svg"
+              alt="gitlab-icon"
               className={classes["technologies__cards__card__image-box__img"]}
             />
             <img
-              src="/assets/icons/git.svg"
-              alt="Git-icon"
-              className={classes["technologies__cards__card__image-box__img"]}
-            />
-            <img
-              src="/assets/icons/mongodb-original-wordmark.svg"
-              alt="MongoDB-icon"
+              src="/assets/icons/jira.svg"
+              alt="jira-icon"
               className={classes["technologies__cards__card__image-box__img"]}
             />
           </div>

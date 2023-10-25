@@ -82,6 +82,7 @@
 }
 .project__top-container__technologies__icons__icon {
   height: 25px;
+  width: 40px;
 }
 .project__top-container__technologies__button-box {
   display: flex;

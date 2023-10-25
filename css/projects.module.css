@@ -102,6 +102,7 @@
 }
 .projects__project__details__icons {
   display: inline-flex;
+  flex-wrap: wrap;
   margin-top: 7vh;
   gap: 1vw;
 }
