@@ -222,7 +222,7 @@ const Technologies = () => {
 
           <div className={classes["technologies__cards__card__image-box"]}>
             <img
-              src="/assets/icons/youtube.svg"
+              src="/assets/icons/github.svg"
               alt="github-icon"
               className={classes["technologies__cards__card__image-box__img"]}
             />

@@ -180,6 +180,82 @@ const Education = () => {
                 classes["education__cards-container__cards-box__card__title"]
               }
             >
+              <span
+                className={
+                  classes[
+                    "education__cards-container__cards-box__card__title__orange"
+                  ]
+                }
+              >
+                React, NodeJS, Express & MongoDB
+              </span>
+              {""} - The MERN Fullstack Guide
+            </span>
+            <span
+              className={
+                classes["education__cards-container__cards-box__card__time"]
+              }
+            >
+              2023
+            </span>
+            <a href="https://www.udemy.com/certificate/UC-ae5dd0e2-6389-4206-88a5-88b4b7f17d6b/">
+              <img src="/assets/bx-certification.svg" />
+              Certificate
+            </a>
+            <span
+              className={
+                classes["education__cards-container__cards-box__card__academy"]
+              }
+            >
+              Udemy
+            </span>
+          </div>
+          <div
+            className={classes["education__cards-container__cards-box__card"]}
+          >
+            <span
+              className={
+                classes["education__cards-container__cards-box__card__title"]
+              }
+            >
+              <span
+                className={
+                  classes[
+                    "education__cards-container__cards-box__card__title__orange"
+                  ]
+                }
+              >
+                SQL
+              </span>
+              {""} - The Complete Developer's Guide (MySQL, PostgreSQL)
+            </span>
+            <span
+              className={
+                classes["education__cards-container__cards-box__card__time"]
+              }
+            >
+              2023
+            </span>
+            <a href="https://www.udemy.com/certificate/UC-999d9da1-f95a-45ba-9a44-b55be5066a44/">
+              <img src="/assets/bx-certification.svg" />
+              Certificate
+            </a>
+            <span
+              className={
+                classes["education__cards-container__cards-box__card__academy"]
+              }
+            >
+              Udemy
+            </span>
+          </div>
+          <div
+            className={classes["education__cards-container__cards-box__card"]}
+          >
+            <span
+              className={
+                classes["education__cards-container__cards-box__card__title"]
+              }
+            >
               Kurs Tworzenia Stron WWW cz.II -
               <span
                 className={
