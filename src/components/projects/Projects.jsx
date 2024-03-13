@@ -11,6 +11,7 @@ const projects = [
       "/assets/icons/react.svg",
       "/assets/icons/redux-original.svg",
       "/assets/icons/react-router.svg",
+      "/assets/icons/cypress.svg",
       "/assets/icons/file-type-js-official.svg",
       "/assets/icons/sass-original.svg",
       "/assets/icons/postgresql-plain-wordmark.svg",

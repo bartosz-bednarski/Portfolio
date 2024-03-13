@@ -5,9 +5,7 @@ import * as portrait from "../../../public/assets/portrait.png";
 const Home = () => {
   return (
     <div className={classes.home}>
-      <span className={classes["home__position"]}>
-        Junior Front-end Developer
-      </span>
+      <span className={classes["home__position"]}>Front-end Developer</span>
       <div className={classes["home__left"]}>
         <div className={classes["home__left__header-box"]}>
           <h1 className={classes["home__left__header-box__welcome"]}>There!</h1>
@@ -18,22 +16,13 @@ const Home = () => {
           </h1>
         </div>
         <p className={classes["home__left__bio"]}>
-          I am a self-taught individual who is continuously developing my skills
-          through working on individual projects where I have the opportunity to
-          apply and showcase my abilities.
-          <br /> Currently, I am working on a website that will serve as a guide
-          for the browser-based game "geoguessr."
-          <br /> The project consists of a front-end layer written in React
-          using React Router and styled with SCSS, a REST API built in Express
-          to handle database queries, and a PostgreSQL database.
-          <br /> Simultaneously, I am learning React Native, which will enable
-          me to create a mobile application for the aforementioned website. Time
-          management is crucial for me, and I use Jira to monitor progress in
-          the project.
-          <br /> Feel free to check the progress of my work on GitHub in the
-          GEOMETA repository.
-          <br /> In my spare time, I read about design patterns and tackle
-          problems on LeetCode or HackerRank.
+          I have 1.5 years of experience in programming web applications
+          including 3 months of commercial experience. The technologies I have
+          written the most code in and feel comfortable with are React with
+          Redux and TypeScript combined with Sass. Currently I am working with
+          React Native where I am developing an android application for managing
+          household budgets. <br />I am currently learning and improving my
+          skills in React Native and Cypress.
         </p>
         <span className={classes["home__left__contact"]}>
           <a href="https://www.linkedin.com/in/bartosz-bednarski-050196234/">

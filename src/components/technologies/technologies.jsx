@@ -60,6 +60,12 @@ const Technologies = () => {
           <span className={classes["technologies__cards__card__item"]}>
             Express.js
           </span>
+          <span className={classes["technologies__cards__card__item"]}>
+            React Native
+          </span>
+          <span className={classes["technologies__cards__card__item"]}>
+            Cypress
+          </span>
           <div className={classes["technologies__cards__card__image-box"]}>
             <img
               src="/assets/icons/next-js.svg"
@@ -70,6 +76,17 @@ const Technologies = () => {
               src="/assets/icons/express.svg"
               alt="
               Express-icon"
+              className={classes["technologies__cards__card__image-box__img"]}
+              width={60}
+            />
+            <img
+              src="/assets/icons/react.svg"
+              alt="React-icon"
+              className={classes["technologies__cards__card__image-box__img"]}
+            />
+            <img
+              src="/assets/icons/cypress.svg"
+              alt="Cypress-icon"
               className={classes["technologies__cards__card__image-box__img"]}
             />
           </div>
