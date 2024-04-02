@@ -149,6 +149,82 @@ const Education = () => {
                   ]
                 }
               >
+                Understanding{" "}
+              </span>
+              TypeScript
+            </span>
+            <span
+              className={
+                classes["education__cards-container__cards-box__card__time"]
+              }
+            >
+              2024{" "}
+            </span>
+            <a href="https://www.udemy.com/certificate/UC-27df5e99-62fc-466c-8a90-8d11f8d18fcd/">
+              <img src="/assets/bx-certification.svg" />
+              Certificate
+            </a>
+            <span
+              className={
+                classes["education__cards-container__cards-box__card__academy"]
+              }
+            >
+              Udemy
+            </span>
+          </div>
+          <div
+            className={classes["education__cards-container__cards-box__card"]}
+          >
+            <span
+              className={
+                classes["education__cards-container__cards-box__card__title"]
+              }
+            >
+              <span
+                className={
+                  classes[
+                    "education__cards-container__cards-box__card__title__orange"
+                  ]
+                }
+              >
+                React Native {""}
+              </span>
+              - The Practical Guide [2024]
+            </span>
+            <span
+              className={
+                classes["education__cards-container__cards-box__card__time"]
+              }
+            >
+              2024{" "}
+            </span>
+            <a href="https://www.udemy.com/certificate/UC-dc9cfb16-e5b7-494c-8439-fb54077e8a59/">
+              <img src="/assets/bx-certification.svg" />
+              Certificate
+            </a>
+            <span
+              className={
+                classes["education__cards-container__cards-box__card__academy"]
+              }
+            >
+              Udemy
+            </span>
+          </div>
+          <div
+            className={classes["education__cards-container__cards-box__card"]}
+          >
+            <span
+              className={
+                classes["education__cards-container__cards-box__card__title"]
+              }
+            >
+              <span
+                className={
+                  classes[
+                    "education__cards-container__cards-box__card__title__orange"
+                  ]
+                }
+              >
                 React{" "}
               </span>
               - The Complete Guide

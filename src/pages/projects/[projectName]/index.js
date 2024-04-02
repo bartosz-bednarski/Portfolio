@@ -1,6 +1,62 @@
 import Project from "@/components/projects/project/Project";
 import { useRouter } from "next/router";
 const ProjectName = {
+  ogarnietyBudzet: {
+    name: "Ogarnięty Budżet",
+    mainImg: "/assets/ogarnietyBudzet/layout.png",
+    mainImgMobile: "/assets/ogarnietyBudzet/Screenshot_1709200694.png",
+    technologiesList: [
+      "React Native",
+      "Redux-toolkit",
+      "TypeScript",
+      "Cypress",
+      "Github",
+      "Jira",
+    ],
+    icons: [
+      "/assets/icons/react.svg",
+      "/assets/icons/redux-original.svg",
+      "/assets/icons/typescript-icon.svg",
+      "/assets/icons/cypress.svg",
+      "/assets/icons/github.svg",
+      "/assets/icons/jira.svg",
+    ],
+    about:
+      '"Ogarnięty Budżet" app will allow you to easily manage all your finances. Using the available options, you will take control of your income, expenses, and savings. From now on, not a single coin will slip through your fingers.',
+    aboutList: [
+      "Configure your own names and choose matching icons, then track your expense and income statements displayed over periods of a week, month, year, and years.",
+      "Plan your monthly expenses and monitor their progress in real-time. Additionally, the app will allow you to set financial goals (like saving for a specific purpose).",
+      "Add bills or bank accounts and modify them in terms of name and the currency in which you conduct transactions. Over time, as you use the app, you will receive monthly summaries showing how much money you have managed to save in a given month in individual accounts/bank accounts.",
+      " The application was created using React Native with TypeScript.",
+      "Redux has been used for managing logic.",
+      "All entered data is stored in the device's local storage using redux-persist.",
+    ],
+    gallery: [
+      "/assets/ogarnietyBudzet/Screenshot_1709193395.png",
+      "/assets/ogarnietyBudzet/Screenshot_1709193457.png",
+      "/assets/ogarnietyBudzet/Screenshot_1709200694.png",
+      "/assets/ogarnietyBudzet/Screenshot_1709200744.png",
+      "/assets/ogarnietyBudzet/Screenshot_1709201027.png",
+      "/assets/ogarnietyBudzet/Screenshot_1709201806.png",
+      "/assets/ogarnietyBudzet/Screenshot_1709201836.png",
+      "/assets/ogarnietyBudzet/Screenshot_1709201849.png",
+      "/assets/ogarnietyBudzet/Screenshot_1709202136.png",
+    ],
+    mobileGallery: [
+      "/assets/ogarnietyBudzet/Screenshot_1709193395.png",
+      "/assets/ogarnietyBudzet/Screenshot_1709193457.png",
+      "/assets/ogarnietyBudzet/Screenshot_1709200694.png",
+      "/assets/ogarnietyBudzet/Screenshot_1709200744.png",
+      "/assets/ogarnietyBudzet/Screenshot_1709201027.png",
+      "/assets/ogarnietyBudzet/Screenshot_1709201806.png",
+      "/assets/ogarnietyBudzet/Screenshot_1709201836.png",
+      "/assets/ogarnietyBudzet/Screenshot_1709201849.png",
+      "/assets/ogarnietyBudzet/Screenshot_1709202136.png",
+    ],
+    live: "https://play.google.com/store/apps/details?id=com.bartoszBednarski.ogarnietyBudzet&pcampaignid=web_share",
+    repo: "https://github.com/bartosz-bednarski/Ogarniety-Budzet",
+    type: "mobile",
+  },
   geometa: {
     name: "GeoMeta",
     mainImg: "/assets/geometa/01.PNG",
@@ -57,6 +113,7 @@ const ProjectName = {
     ],
     live: "https://geo-meta.vercel.app/",
     repo: "https://github.com/bartosz-bednarski/GEOMeta",
+    type: "desktop",
   },
   hotel: {
     name: "Hotel",
@@ -107,6 +164,7 @@ const ProjectName = {
     ],
     live: "https://sapphire-palace.vercel.app/",
     repo: "https://github.com/bartosz-bednarski/Hotel-Project",
+    type: "desktop",
   },
   "plan-this": {
     name: "Plan.This",
@@ -156,6 +214,7 @@ const ProjectName = {
     ],
     live: "https://bartosz-bednarski.github.io/Plan.this-Project/",
     repo: "https://github.com/bartosz-bednarski/Plan.this-Project",
+    type: "desktop",
   },
   "paintings-store": {
     name: "Paintings-store",
@@ -197,6 +256,7 @@ const ProjectName = {
     ],
     live: "https://bartosz-bednarski.github.io/Paintings-store-project/",
     repo: "https://github.com/bartosz-bednarski/Paintings-store-project",
+    type: "desktop",
   },
   youTube: {
     name: "YouTube",
@@ -240,6 +300,7 @@ const ProjectName = {
     ],
     live: "https://bartosz-bednarski.github.io/YouTube-Project/",
     repo: "https://github.com/bartosz-bednarski/YouTube-Project",
+    type: "desktop",
   },
   restaurant: {
     name: "Restaurant",
@@ -269,6 +330,7 @@ const ProjectName = {
     ],
     live: "https://bartosz-bednarski.github.io/Restaurant-Project/",
     repo: "https://github.com/bartosz-bednarski/Restaurant-Project",
+    type: "desktop",
   },
 };
 
@@ -281,6 +343,11 @@ export async function getStaticPaths() {
   return {
     fallback: false,
     paths: [
+      {
+        params: {
+          projectName: "ogarnietyBudzet",
+        },
+      },
       {
         params: {
           projectName: "geometa",

@@ -3,6 +3,22 @@ import classes from "./projects.module.scss";
 
 const projects = [
   {
+    name: "Ogarnięty Budżet",
+    id: "ogarnietyBudzet",
+    mainImg: "/assets/ogarnietyBudzet/layout.png",
+    mobileMainImg: "/assets/ogarnietyBudzet/Screenshot_1709200694.png",
+    icons: [
+      "/assets/icons/react.svg",
+      "/assets/icons/redux-original.svg",
+      "/assets/icons/typescript-icon.svg",
+      "/assets/icons/cypress.svg",
+      "/assets/icons/github.svg",
+      "/assets/icons/jira.svg",
+    ],
+    start: "18.12.2023",
+    live: "02.04.2024",
+  },
+  {
     name: "GeoMeta",
     id: "geometa",
     mainImg: "/assets/geometa/01.PNG",
@@ -124,7 +140,7 @@ const Projects = () => {
             />
             <div className={classes["projects__project__details"]}>
               <span className={classes["projects__project__details__title"]}>
-                {item.name} Project
+                {item.name}
               </span>
               <span className={classes["projects__project__details__timeline"]}>
                 Starting Project Date: {item.start}

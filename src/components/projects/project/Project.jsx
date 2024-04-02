@@ -5,7 +5,6 @@ const Project = (props) => {
   //   setData(props.data);
   // });
   // const [data, setData] = useState(props.data);
-  console.log(props.data);
   return (
     <div className={classes.project}>
       <div className={classes["project__title-container"]}>
@@ -48,14 +47,18 @@ const Project = (props) => {
                 }
               >
                 <img
-                  src="/assets/icons/github.svg"
+                  src={
+                    props.data.type === "desktop"
+                      ? "/assets/icons/github.svg"
+                      : "/assets/icons/playstore.svg"
+                  }
                   className={
                     classes[
                       "project__top-container__technologies__button-box__button__img"
                     ]
                   }
                 />
-                Live
+                {props.data.type === "desktop" ? "Live" : "Store"}
               </button>
             </a>
             <a href={props.data.repo}>
@@ -106,20 +109,41 @@ const Project = (props) => {
           ))}
         </ul>
       </div>
-      <div className={classes["project__gallery-container"]}>
-        {props.data.gallery.map((item) => (
-          <img
-            src={item}
-            className={classes["project__gallery-container__img"]}
-          />
-        ))}
-        {props.data.mobileGallery.map((item) => (
-          <img
-            src={item}
-            className={classes["project__gallery-container__img-mobile"]}
-          />
-        ))}
-      </div>
+
+      {props.data.type === "desktop" && (
+        <div className={classes["project__gallery-container"]}>
+          {props.data.gallery.map((item) => (
+            <img
+              src={item}
+              className={classes["project__gallery-container__img"]}
+            />
+          ))}
+          {props.data.mobileGallery.map((item) => (
+            <img
+              src={item}
+              className={classes["project__gallery-container__img-mobile"]}
+            />
+          ))}
+        </div>
+      )}
+      {props.data.type === "mobile" && (
+        <div className={classes["project__gallery-container__mobile"]}>
+          {props.data.gallery.map((item) => (
+            <img
+              src={item}
+              className={classes["project__gallery-container__mobile__img"]}
+            />
+          ))}
+          {props.data.mobileGallery.map((item) => (
+            <img
+              src={item}
+              className={
+                classes["project__gallery-container__mobile__img-mobile"]
+              }
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
