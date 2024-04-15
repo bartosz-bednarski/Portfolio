@@ -1,6 +1,43 @@
 import Project from "@/components/projects/project/Project";
 import { useRouter } from "next/router";
 const ProjectName = {
+  atzmDesign: {
+    name: "A.T.Ż.M Design",
+    mainImg: "/assets/atzm/1.png",
+    mainImgMobile: "/assets/atzm/01_mobile.png",
+    technologiesList: ["Wordpress", "WooCommerce"],
+    icons: ["/assets/icons/wordpress.svg", "/assets/icons/woocommerce.svg"],
+    about:
+      '"A.T.Ż.M Design" is an online store specializing in the sale of handmade sweaters.',
+    aboutList: [
+      "The site was created in WordPress with the WooCommerce plugin",
+      "WPForms were used for user contact with the store owner and for order data submission.",
+      "A responsive design was implemented for all subpages.",
+      "Uploaded images and content were optimized to improve site performance.",
+      "Available products were configured along with their inventory management.",
+      "Online payment methods were added.",
+      "Delivery options were added with the ability to select parcel lockers from the supplier's map.",
+      "Email message content was configured to inform the customer about the status of their order.",
+    ],
+    gallery: [
+      "/assets/atzm/2.png",
+      "/assets/atzm/3.png",
+      "/assets/atzm/4.png",
+      "/assets/atzm/5.png",
+      "/assets/atzm/6.png",
+    ],
+    mobileGallery: [
+      "/assets/atzm/02_mobile.png",
+      "/assets/atzm/03_mobile.png",
+      "/assets/atzm/04_mobile.png",
+      "/assets/atzm/05_mobile.png",
+      "/assets/atzm/06_mobile.png",
+      "/assets/atzm/07_mobile.png",
+    ],
+    live: "https://atzmdesign.pl/",
+    repo: "https://github.com/bartosz-bednarski",
+    type: "desktop",
+  },
   ogarnietyBudzet: {
     name: "Ogarnięty Budżet",
     mainImg: "/assets/ogarnietyBudzet/layout.png",
@@ -343,6 +380,11 @@ export async function getStaticPaths() {
   return {
     fallback: false,
     paths: [
+      {
+        params: {
+          projectName: "atzmDesign",
+        },
+      },
       {
         params: {
           projectName: "ogarnietyBudzet",

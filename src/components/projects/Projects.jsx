@@ -3,6 +3,15 @@ import classes from "./projects.module.scss";
 
 const projects = [
   {
+    name: "A.T.Ż.M Design",
+    id: "atzmDesign",
+    mainImg: "/assets/atzm/1.png",
+    mobileMainImg: "/assets/atzm/01_mobile.png",
+    icons: ["/assets/icons/wordpress.svg", "/assets/icons/woocommerce.svg"],
+    start: "01.04.2024",
+    live: "15.04.2024",
+  },
+  {
     name: "Ogarnięty Budżet",
     id: "ogarnietyBudzet",
     mainImg: "/assets/ogarnietyBudzet/layout.png",
